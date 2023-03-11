@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Infra.Data.Repository.Repositories
 {
-    public class AddressRepository : BaseRepository<Address>, IAddressRepository
+    public class OccurrenceRepository : BaseRepository<Occurrence>, IOccurrenceRepository
     {
-        public AddressRepository(MySqlContext context) : base(context)
+        public OccurrenceRepository(MySqlContext context) : base(context)
         {
         }
     }
