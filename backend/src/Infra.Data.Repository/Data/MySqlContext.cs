@@ -23,7 +23,7 @@ namespace Infra.Data.Repository.Data
         #region DbSets
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Occurrence> Occurrences { get; set;}
-        //public DbSet<Person> People { get; set; }
+        public DbSet<Person> People { get; set; }
         #endregion
     }
 }
