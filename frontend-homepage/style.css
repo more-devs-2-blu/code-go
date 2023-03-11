@@ -1,0 +1,115 @@
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #2864ae;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+.navlinks {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar a {
+    margin: 0px 30px;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.navbar a:hover {
+    transition: 0.3s;
+    background: white;
+    color: #2864ae;
+}
+
+.main {
+    margin-top: 30px;
+}
+
+h1 {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.topics-container {
+    margin: 5rem 30rem;
+}
+
+.topics {
+    margin-right: auto;
+    width: fit-content;
+    display: flex;
+}
+
+.topics:nth-of-type(2) {
+    margin-left: auto;
+    margin-right: 0;
+    flex-direction: row-reverse;
+}
+
+.topic-title {
+    font-weight: bold;
+    font-size: large;
+}
+
+.topic-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+}
+
+.video-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.video {
+    border: 2px black solid;
+    border-radius: 20px;
+    margin: 0rem 25rem 2rem;
+    height: 35rem;
+}
+
+.start-btn {
+    display: flex;
+    margin: auto;
+    margin-bottom: 2rem;
+    background-color: #2864ae;
+    color: white;
+    border-radius: 30px;
+    border: 2px #2864ae solid;
+    height: 46px;
+    padding: 10px 16px;
+}
+
+.start-btn:hover {
+    transition: 0.3s;
+    background: white;
+    color: #2864ae;
+    border: 2px #2864ae solid;
+    font-weight: bold;
+}
+
+.footer-container {
+    height: fit-content;
+    margin: 0;
+    padding: 0 20px;
+    max-width: 100vw;
+}
+
+#f-container {
+    height: fit-content;
+    padding: 0;
+    margin-top: 0;
+}
