@@ -1,4 +1,5 @@
 ﻿using Domain.Interfeces.IRepositories;
+using Infra.Data.Repository.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,30 +10,39 @@ namespace Infra.Data.Repository.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
+        private readonly MySqlContext _context;
+
+        public BaseRepository(MySqlContext context)
+        {
+            _context = context;
+        }
 
         public IQueryable<T> FindAll()
         {
-            throw new NotImplementedException();
+            return _context.Set<T>();
         }
 
-        public Task<T> FindById(int id)
+        public async Task<T> FindById(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Set<T>().FindAsync(id);
         }
 
         public Task<int> Save(T entity)
         {
-            throw new NotImplementedException();
+            _context.Set<T>().Add(entity);
+            return _context.SaveChangesAsync();
         }
 
         public Task<int> Update(T entity)
         {
-            throw new NotImplementedException();
+            _context.Set<T>().Update(entity);
+            return _context.SaveChangesAsync();
         }
 
         public Task<int> Delete(T entity)
         {
-            throw new NotImplementedException();
+            _context.Set<T>().Remove(entity);
+            return _context.SaveChangesAsync();
         }
     }
 }
