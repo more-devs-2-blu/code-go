@@ -19,8 +19,8 @@ namespace Domain.DTO
         public int frequency { get; set; }
         public string? image { get; set; }
 
-        //public virtual ICollection<Person>? Person { get; set; }
-        public virtual ICollection<AddressDTO>? addresses { get; set; }
+        public virtual IEnumerable<Person>? Person { get; set; }
+        public virtual IEnumerable<AddressDTO>? addresses { get; set; }
 
         #region Methods
         public Occurrence MapToEntity()
