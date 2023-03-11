@@ -1,0 +1,12 @@
+D:\Projetos\code-go\backend\src\Application.Service\bin\Debug\net6.0\Application.Service.deps.json
+D:\Projetos\code-go\backend\src\Application.Service\bin\Debug\net6.0\Application.Service.dll
+D:\Projetos\code-go\backend\src\Application.Service\bin\Debug\net6.0\Application.Service.pdb
+D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.csproj.AssemblyReference.cache
+D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.AssemblyInfoInputs.cache
+D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.AssemblyInfo.cs
+D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.csproj.CoreCompileInputs.cache
+D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.dll
+D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\refint\Application.Service.dll
+D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.pdb
+D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\ref\Application.Service.dll

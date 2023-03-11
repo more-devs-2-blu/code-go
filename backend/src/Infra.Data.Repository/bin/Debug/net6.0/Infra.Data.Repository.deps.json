@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Infra.Data.Repository/1.0.0": {
+        "runtime": {
+          "Infra.Data.Repository.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Infra.Data.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
