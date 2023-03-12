@@ -23,7 +23,7 @@ namespace Domain.DTO
         public string cpf { get; set; }
         public PersonTypeEnum type { get; set; }
 
-        public virtual ICollection<OccurrenceDTO>? occurrences { get; set; }
+        //public virtual ICollection<OccurrenceDTO>? occurrences { get; set; }
 
 
         #region Methods

@@ -22,7 +22,7 @@ namespace Application.API.Controllers
             return Ok(_addressService.FindAll());
         }
 
-        // GET api/<AddressController>/5
+        // GET api/<AddressController>/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<AddressDTO>> Get(int id)
         {
@@ -48,7 +48,7 @@ namespace Application.API.Controllers
             return new ObjectResult(await _addressService.Save(address));
         }
 
-        // PUT api/<AddressController>/5
+        // PUT api/<AddressController>/{id}
         [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] AddressDTO address)
         {
@@ -56,7 +56,7 @@ namespace Application.API.Controllers
             return new ObjectResult(await _addressService.Update(address));
         }
 
-        // DELETE api/<AddressController>/5
+        // DELETE api/<AddressController>/{id}
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
