@@ -1,11 +1,43 @@
+using Microsoft.EntityFrameworkCore;
+using Infra.Data.Repository.Data;
+using Domain.Interfeces.IRepositories;
+using Infra.Data.Repository.Repositories;
+using Domain.Interfeces.IServices;
+using Application.Service.MySQLServices;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "CorsPolicy",
+        builder =>
+        {
+            builder.WithOrigins("*");
+            builder.AllowAnyHeader();
+            builder.AllowAnyMethod();
+            builder.AllowAnyOrigin();
+        }
+    );
+});
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+string ConnectionString = builder.Configuration.GetConnectionString("MySQLConnection");
+builder.Services.AddDbContext<MySqlContext>
+    (options => options.UseMySql(ConnectionString, ServerVersion.AutoDetect(ConnectionString)));
+
+// # Dependency Injection
+// Repositories
+builder.Services.AddScoped<IPersonRepository, PersonRepository>();
+builder.Services.AddScoped<IAddressRepository, AddressRepository>();
+builder.Services.AddScoped<IOccurrenceRepository, OccurrenceRepository>();
+
+// Services
+builder.Services.AddScoped<IPersonService, PersonService>();
+builder.Services.AddScoped<IAddressService, AddressService>();
+builder.Services.AddScoped<IOccurrenceService, OccurrenceService>();
 
 var app = builder.Build();
 
@@ -15,6 +47,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 

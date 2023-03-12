@@ -10,3 +10,8 @@ D:\Projetos\code-go\backend\src\Infra.Data.Repository\obj\Debug\net6.0\Infra.Dat
 D:\Projetos\code-go\backend\src\Infra.Data.Repository\obj\Debug\net6.0\refint\Infra.Data.Repository.dll
 D:\Projetos\code-go\backend\src\Infra.Data.Repository\obj\Debug\net6.0\Infra.Data.Repository.pdb
 D:\Projetos\code-go\backend\src\Infra.Data.Repository\obj\Debug\net6.0\ref\Infra.Data.Repository.dll
+D:\Projetos\code-go\backend\src\Infra.Data.Repository\bin\Debug\net6.0\Infra.Data.Repository.runtimeconfig.json
+D:\Projetos\code-go\backend\src\Infra.Data.Repository\bin\Debug\net6.0\Domain.dll
+D:\Projetos\code-go\backend\src\Infra.Data.Repository\bin\Debug\net6.0\Domain.pdb
+D:\Projetos\code-go\backend\src\Infra.Data.Repository\obj\Debug\net6.0\Infra.Data.Repository.csproj.CopyComplete
+D:\Projetos\code-go\backend\src\Infra.Data.Repository\obj\Debug\net6.0\Infra.Data.Repository.genruntimeconfig.cache
