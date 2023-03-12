@@ -2,8 +2,6 @@
 using Domain.Interfeces.IServices;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace Application.API.Controllers
 {
     [Route("api/[controller]")]
@@ -24,7 +22,7 @@ namespace Application.API.Controllers
             return Ok(_personService.FindAll());
         }
 
-        // GET api/<PersonController>/5
+        // GET api/<PersonController>/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<PersonDTO>> Get(int id)
         {
@@ -50,7 +48,7 @@ namespace Application.API.Controllers
             return new ObjectResult(await _personService.Save(person));
         }
 
-        // PUT api/<PersonController>/5
+        // PUT api/<PersonController>/{id}
         [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] PersonDTO person)
         {
@@ -58,7 +56,7 @@ namespace Application.API.Controllers
             return new ObjectResult(await _personService.Update(person));
         }
 
-        // DELETE api/<PersonController>/5
+        // DELETE api/<PersonController>/{id}
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
