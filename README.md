@@ -21,7 +21,7 @@ As tecnologias utilizadas são:
 Membros da equipe:
  - [Bernardo](https://github.com/bernardogodac)
  - [Cora](https://github.com/coramori)
- - [Jailson](https://github.com/JailsonRoth)
+ - [Jailson](https://github.com/Jailsonr12)
  - [Lucas](https://github.com/Luc4sKr)
  - [Roberto](https://github.com/RobertoOliveiira)
  - [Yasmin](https://github.com/yasminvic)
