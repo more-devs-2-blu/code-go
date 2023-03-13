@@ -9,5 +9,6 @@ namespace Domain.Interfeces.IRepositories
 {
     public interface IOccurrenceRepository : IBaseRepository<Occurrence>
     {
+        IQueryable<Occurrence> GetAllByPersonId(int personId);
     }
 }
