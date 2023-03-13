@@ -1,5 +1,5 @@
-# code-go
-Desafio B: Como um cidadão pode ajudar na zeladoria pública de sua cidade?
+# EQUIPE CODE-GO - HACKATHON - +DEVS2BLU 2022
+**Desafio B: Como um cidadão pode ajudar na zeladoria pública de sua cidade?**
 
 Nosso objetivo é desenvolver um projeto que facilite de modo intuitivo a interação entre população e prefeitura.
  - O usuário poderá relatar ocorrências em sua região.
@@ -8,13 +8,24 @@ Nosso objetivo é desenvolver um projeto que facilite de modo intuitivo a intera
  - Em seguida, informará que foi resolvido e como solucionou tal eventualidade.
  - Durante o processo o usuário poderá acompanhar o status da ocorrência, assim criando uma maior transparência neste processo do nosso dia a dia.
 
-O projeto está sendo desenvolvido como desafio hackaton de conclusão do curso +Devs2Blu da turma C#
+_______________________________________________________________________________________________________________
+
+O projeto está sendo desenvolvido como desafio hackaton de conclusão do curso +Devs2Blu da turma Code-Go de C#
 
 As tecnologias utilizadas são:
  - C# ASP.NET Core
  - Angular
  - MySql
  - Arquitetura MVC e DDD
- 
+
+Membros da equipe:
+ - [Bernardo](https://github.com/bernardogodac)
+ - [Cora](https://github.com/coramori)
+ - [Jailson](https://github.com/JailsonRoth)
+ - [Lucas](https://github.com/Luc4sKr)
+ - [Roberto](https://github.com/RobertoOliveiira)
+ - [Yasmin](https://github.com/yasminvic)
+_______________________________________________________________________________________________________________
+
 ![image](https://user-images.githubusercontent.com/35773596/224611390-eabf455c-f25f-436b-9e15-629d13bb9f20.png)
-![image](https://user-images.githubusercontent.com/35773596/224610536-162048a4-332d-408e-830f-6306aef27b97.png)
+![image](https://user-images.githubusercontent.com/109560393/224811889-b90890c1-800f-437d-b3dc-af84e14b0b04.png)
