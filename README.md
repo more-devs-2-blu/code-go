@@ -16,5 +16,5 @@ As tecnologias utilizadas são:
  - MySql
  - Arquitetura MVC e DDD
  
-![image](https://user-images.githubusercontent.com/35773596/224610370-635d11b7-13f5-459b-84c5-d19a9a157bbf.png)
+![image](https://user-images.githubusercontent.com/35773596/224611390-eabf455c-f25f-436b-9e15-629d13bb9f20.png)
 ![image](https://user-images.githubusercontent.com/35773596/224610536-162048a4-332d-408e-830f-6306aef27b97.png)
