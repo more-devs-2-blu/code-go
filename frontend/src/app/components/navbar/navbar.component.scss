@@ -1,0 +1,74 @@
+/* Header */
+
+.navbar {
+  overflow: hidden;
+  background-color: #2864ae;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex !important;
+  justify-content: start !important;
+  flex-wrap: nowrap !important;
+  box-shadow: 0px 4px 4px rgb(204, 204, 204);
+}
+
+.logo-nav {
+  margin-left: 2.5rem;
+  margin-bottom: 0.5rem;
+  width: 110px;
+  height: auto;
+}
+
+.home-icon {
+  color: white;
+}
+
+.navlinks {
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar a {
+  margin-right: 1rem;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+.navbar a:hover {
+  transition: 0.3s;
+  background: white;
+  color: #2864ae;
+  box-shadow: 0px 1px 6px rgb(78, 78, 78);
+}
+
+.nav-btns {
+  margin-right: auto;
+}
+
+.nav-icon-left {
+  margin-right: 5px;
+  padding-bottom: 2px;
+}
+
+.nav-icon-right {
+  margin-left: 5px;
+  padding-bottom: 2px;
+}
+
+.login-btn {
+  margin-left: auto;
+}
+
+.user-logo {
+  padding-left: 10px;
+}
