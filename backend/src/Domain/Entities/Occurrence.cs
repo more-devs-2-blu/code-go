@@ -18,7 +18,7 @@ namespace Domain.Entities
         public int Frequency { get; set; }
         public string? Image { get; set; }
     
-        public virtual IEnumerable<Person>? Person { get; set; }
-        public virtual IEnumerable<Address>? Addresses { get; set; }
+        public virtual Person Person { get; set; }
+        public virtual Address Address { get; set; }
     }
 }

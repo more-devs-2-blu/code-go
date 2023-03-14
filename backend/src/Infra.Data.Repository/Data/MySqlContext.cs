@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,20 @@ namespace Infra.Data.Repository.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+            modelBuilder.Entity<Occurrence>()
+                .HasOne(occurrence => occurrence.Person)
+                .WithMany(person => person.Occurrences)
+                .HasForeignKey(occurrence => occurrence.IdPerson);
+
+            modelBuilder.Entity<Occurrence>()
+                .HasOne(occurrence => occurrence.Address)
+                .WithOne(address => address.Occurrence)
+                .HasForeignKey<Occurrence>(occurrence => occurrence.IdAddress);
+
+            modelBuilder.Entity<Person>()
+                .HasData(
+                    new { Id=1, Name="Admin", Birth=new DateTime(), Email="admin@gmail.com", Password="admin", Phone="47988887777", CreatedOn=DateTime.Now, CPF= "15746546240", Type=PersonTypeEnum.Administrator }
+                );
         }
 
         #region DbSets

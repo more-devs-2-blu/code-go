@@ -11,8 +11,17 @@ namespace Infra.Data.Repository.Repositories
 {
     public class OccurrenceRepository : BaseRepository<Occurrence>, IOccurrenceRepository
     {
+        private readonly MySqlContext _context;
+
         public OccurrenceRepository(MySqlContext context) : base(context)
         {
+            _context = context;
+        }
+
+        public IQueryable<Occurrence> GetAllByPersonId(int personId)
+        {
+            return _context.Set<Occurrence>()
+                .Where(occurrence => occurrence.IdPerson == personId);
         }
     }
 }

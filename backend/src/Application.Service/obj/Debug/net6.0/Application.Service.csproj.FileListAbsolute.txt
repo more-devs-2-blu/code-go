@@ -10,3 +10,8 @@ D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application
 D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\refint\Application.Service.dll
 D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.pdb
 D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\ref\Application.Service.dll
+D:\Projetos\code-go\backend\src\Application.Service\bin\Debug\net6.0\Domain.dll
+D:\Projetos\code-go\backend\src\Application.Service\bin\Debug\net6.0\Infra.Data.Repository.dll
+D:\Projetos\code-go\backend\src\Application.Service\bin\Debug\net6.0\Domain.pdb
+D:\Projetos\code-go\backend\src\Application.Service\bin\Debug\net6.0\Infra.Data.Repository.pdb
+D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.csproj.CopyComplete
