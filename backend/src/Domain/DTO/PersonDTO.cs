@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Domain.Enums;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace Domain.DTO
         public string cpf { get; set; }
         public PersonTypeEnum type { get; set; }
 
-        public virtual IEnumerable<OccurrenceDTO>? occurrences { get; set; }
+        public virtual ICollection<OccurrenceDTO>? occurrences { get; set; }
 
 
         #region Methods
@@ -38,15 +39,13 @@ namespace Domain.DTO
                 Phone = phone,
                 CreatedOn = createdOn,
                 CPF = cpf,
-                Type = type,
-                Occurrences = occurrences.Select(x => x.MapToEntity())
+                Type = type
             };
         }
 
         public PersonDTO MapToDTO(Person person)
         {
             OccurrenceDTO occurrenceDTO = new OccurrenceDTO();
-
             return new PersonDTO()
             {
                 id = person.Id,
@@ -57,9 +56,7 @@ namespace Domain.DTO
                 phone = person.Phone,
                 createdOn = person.CreatedOn,
                 cpf = person.CPF,
-                type = person.Type,
-                occurrences = person.Occurrences
-                                    .Select(x => occurrenceDTO.MapToDTO(x))
+                type = person.Type
             };
         }
         #endregion
