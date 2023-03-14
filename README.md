@@ -28,4 +28,4 @@ Membros da equipe:
 _______________________________________________________________________________________________________________
 
 ![image](https://user-images.githubusercontent.com/35773596/224611390-eabf455c-f25f-436b-9e15-629d13bb9f20.png)
-![image](https://user-images.githubusercontent.com/109560393/224811889-b90890c1-800f-437d-b3dc-af84e14b0b04.png)
+![image](https://user-images.githubusercontent.com/109560393/224881679-85e1ed91-d2c5-4c0d-bedf-abb3dfb7c868.png)
