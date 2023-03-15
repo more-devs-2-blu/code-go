@@ -18,8 +18,8 @@
 }
 
 .categories {
-  width: 80rem;
-  background-color: #808080;
+  width: auto;
+  background-color: #a1a1a1a6;
   margin-bottom: 5px;
   border-radius: 0px 10px 10px 10px;
   border-collapse: collapse;
@@ -27,14 +27,18 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.card-list{
-  border: #80808040 1px solid;
-  border-radius: 20px;
-  box-shadow: 1px 3px #80808040, -2px  0.4em #80808040
+#btn-search {
+  margin-right: "30px" !important;
+}
 
+.card-list{
+  border: #a1a1a1a6 0px solid;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);  
 }
 
 .cards{
   background-color: #b7b7b7a6;
   border: none;
-}
+} 
+  
