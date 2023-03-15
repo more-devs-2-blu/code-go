@@ -46,24 +46,23 @@ namespace Application.API.Controllers
             return Ok(occurrence);
         }
 
-        [HttpGet("IdPerson/{id}")]
-        public async Task<ActionResult<OccurrenceDTO>> GetAllByIdPerson(int id)
+        [HttpGet("idPerson/{id}")]
+        public async Task<ActionResult<List<OccurrenceDTO>>> GetAllByIdPerson(int id)
         {
-            OccurrenceDTO occurrence = new OccurrenceDTO();
+            List<OccurrenceDTO> lista = new List<OccurrenceDTO>();
 
-            try
+            var teste = _occurrenceService.FindAll();
+
+            foreach (var item in teste)
             {
-                occurrence = (OccurrenceDTO)_occurrenceRepository.GetAllByPersonId(id);
-            }
-            catch (Exception)
-            {
-                return NotFound();
+                if(item.idPerson == id)
+                {
+                    lista.Add(item);
+                }
             }
 
-            return Ok(occurrence);
+            return lista;
         }
-        
-
 
         // POST api/<OccurrenceController>
         [HttpPost]
