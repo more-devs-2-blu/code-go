@@ -62,6 +62,10 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  enviarLogin():void{
+    
+  }
+
   // createPerson(person: Person){
   //   this.service.postPerson(person).subscribe(
   //       (resp: Person[]) =>
