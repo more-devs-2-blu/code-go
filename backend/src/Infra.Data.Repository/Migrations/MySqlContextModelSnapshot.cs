@@ -62,6 +62,9 @@ namespace Infra.Data.Repository.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<string>("Desciption")
+                        .HasColumnType("longtext");
+
                     b.Property<DateTime?>("ExpectedDate")
                         .HasColumnType("datetime(6)");
 
@@ -133,7 +136,7 @@ namespace Infra.Data.Repository.Migrations
                         {
                             Id = 1,
                             CPF = "15746546240",
-                            CreatedOn = new DateTime(2023, 3, 15, 17, 24, 48, 366, DateTimeKind.Local).AddTicks(2853),
+                            CreatedOn = new DateTime(2023, 3, 15, 18, 29, 4, 149, DateTimeKind.Local).AddTicks(1292),
                             Email = "admin@gmail.com",
                             Name = "Admin",
                             Password = "admin",

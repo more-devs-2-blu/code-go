@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infra.Data.Repository.Migrations
 {
     /// <inheritdoc />
-    public partial class CODEGO : Migration
+    public partial class Codego : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -78,7 +78,9 @@ namespace Infra.Data.Repository.Migrations
                     Frequency = table.Column<int>(type: "int", nullable: false),
                     Image = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Category = table.Column<int>(type: "int", nullable: false)
+                    Category = table.Column<int>(type: "int", nullable: false),
+                    Desciption = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
@@ -128,7 +130,7 @@ namespace Infra.Data.Repository.Migrations
             migrationBuilder.InsertData(
                 table: "People",
                 columns: new[] { "Id", "Birth", "CPF", "CreatedOn", "Email", "Name", "Password", "Phone", "Type" },
-                values: new object[] { 1, null, "15746546240", new DateTime(2023, 3, 15, 17, 24, 48, 366, DateTimeKind.Local).AddTicks(2853), "admin@gmail.com", "Admin", "admin", null, 0 });
+                values: new object[] { 1, null, "15746546240", new DateTime(2023, 3, 15, 18, 29, 4, 149, DateTimeKind.Local).AddTicks(1292), "admin@gmail.com", "Admin", "admin", null, 0 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Occurrences_IdAddress",

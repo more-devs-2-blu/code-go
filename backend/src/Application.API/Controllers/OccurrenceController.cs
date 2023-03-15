@@ -84,7 +84,7 @@ namespace Application.API.Controllers
             return lista;
 
         }
-        [HttpGet("District/{id}")]
+        [HttpGet("District/{district}")]
         public async Task<ActionResult<List<OccurrenceDTO>>> GetAllByDistrict(string district)
         {
             List<OccurrenceDTO> lista = new List<OccurrenceDTO>();
