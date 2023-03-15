@@ -56,6 +56,9 @@ namespace Infra.Data.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<int>("Category")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime(6)");
 
@@ -130,7 +133,7 @@ namespace Infra.Data.Repository.Migrations
                         {
                             Id = 1,
                             CPF = "15746546240",
-                            CreatedOn = new DateTime(2023, 3, 14, 20, 18, 22, 33, DateTimeKind.Local).AddTicks(2718),
+                            CreatedOn = new DateTime(2023, 3, 15, 17, 24, 48, 366, DateTimeKind.Local).AddTicks(2853),
                             Email = "admin@gmail.com",
                             Name = "Admin",
                             Password = "admin",

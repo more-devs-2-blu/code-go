@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Qc2ZGayBEbmC3a2qakBd9fgg8DHLZ2TsmegIRDfSnXPapiMjyejf9GKx260ufv93qD2gj8Lv5fBSXRgS5dw1Zw==",
+  "dgSpecHash": "0vUYO5g6FxmOMQCe3CQqgF4DNjwHhN3aHDwyz+Mb89NDxzMo3ZVlpSAqyRAFqRwlFgLuD2+uXeeWc5AkNGyQVg==",
   "success": true,
-  "projectFilePath": "C:\\ZeloBR\\code-go\\backend\\src\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\Projetos\\code-go\\backend\\src\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

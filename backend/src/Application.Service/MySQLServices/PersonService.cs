@@ -118,5 +118,10 @@ namespace Application.Service.MySQLServices
             var entity = await _personRepository.FindById(id);
             return await _personRepository.Delete(entity);
         }
+
+        public Task<PersonDTO> FindByIdPerson(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
