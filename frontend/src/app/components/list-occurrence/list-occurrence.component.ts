@@ -1,5 +1,7 @@
+// Yasmin
+// --------------
 import { Occurrence } from './../../models/occurrence';
-import { OccurrenceService } from './../../services/occurrence.service';
+import { OccurrenceService } from '../../services/occurrence.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -30,3 +32,19 @@ export class ListOccurrenceComponent implements OnInit{
   }
 
 }
+
+
+
+
+// Bernardo
+// --------------
+// import { Component } from '@angular/core';
+
+// @Component({
+//   selector: 'app-list-occurrence',
+//   templateUrl: './list-occurrence.component.html',
+//   styleUrls: ['./list-occurrence.component.scss']
+// })
+// export class ListOccurrenceComponent {
+
+// }
