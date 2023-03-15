@@ -2,6 +2,7 @@
 using Domain.Interfeces.IServices;
 using Infra.Data.Repository.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using System.Web.Http.OData;
 
 namespace Application.API.Controllers
 {
@@ -18,6 +19,7 @@ namespace Application.API.Controllers
 
         // GET: api/<OccurrenceController>
         [HttpGet]
+        [EnableQuery]
         public async Task<ActionResult<IEnumerable<OccurrenceDTO>>> Get()
         {
             return Ok(_occurrenceService.FindAll());
