@@ -46,12 +46,12 @@ namespace Infra.Data.Repository.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Birth = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    Birth = table.Column<DateTime>(type: "datetime(6)", nullable: true),
                     Email = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Password = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Phone = table.Column<string>(type: "longtext", nullable: false)
+                    Phone = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     CreatedOn = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     CPF = table.Column<string>(type: "longtext", nullable: false)
@@ -97,10 +97,37 @@ namespace Infra.Data.Repository.Migrations
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
+            migrationBuilder.CreateTable(
+                name: "Resolutions",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    IdOccurrence = table.Column<int>(type: "int", nullable: false),
+                    Description = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    CreatedOn = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    Spending = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Image = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Resolutions", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Resolutions_Occurrences_IdOccurrence",
+                        column: x => x.IdOccurrence,
+                        principalTable: "Occurrences",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
             migrationBuilder.InsertData(
                 table: "People",
                 columns: new[] { "Id", "Birth", "CPF", "CreatedOn", "Email", "Name", "Password", "Phone", "Type" },
-                values: new object[] { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "15746546240", new DateTime(2023, 3, 11, 22, 11, 0, 656, DateTimeKind.Local).AddTicks(8972), "admin@gmail.com", "Admin", "admin", "47988887777", 0 });
+                values: new object[] { 1, null, "15746546240", new DateTime(2023, 3, 14, 20, 18, 22, 33, DateTimeKind.Local).AddTicks(2718), "admin@gmail.com", "Admin", "admin", null, 0 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Occurrences_IdAddress",
@@ -112,11 +139,20 @@ namespace Infra.Data.Repository.Migrations
                 name: "IX_Occurrences_IdPerson",
                 table: "Occurrences",
                 column: "IdPerson");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Resolutions_IdOccurrence",
+                table: "Resolutions",
+                column: "IdOccurrence",
+                unique: true);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Resolutions");
+
             migrationBuilder.DropTable(
                 name: "Occurrences");
 

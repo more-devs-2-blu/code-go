@@ -28,9 +28,14 @@ namespace Infra.Data.Repository.Data
                 .WithOne(address => address.Occurrence)
                 .HasForeignKey<Occurrence>(occurrence => occurrence.IdAddress);
 
+            modelBuilder.Entity<Resolution>()
+                .HasOne(resoluton => resoluton.Occurrence)
+                .WithOne(occurrence => occurrence.Resolution)
+                .HasForeignKey<Resolution>(resolution => resolution.IdOccurrence);
+
             modelBuilder.Entity<Person>()
                 .HasData(
-                    new { Id=1, Name="Admin", Birth=new DateTime(), Email="admin@gmail.com", Password="admin", Phone="47988887777", CreatedOn=DateTime.Now, CPF= "15746546240", Type=PersonTypeEnum.Administrator }
+                    new { Id=1, Name="Admin", Email="admin@gmail.com", Password="admin", CreatedOn=DateTime.Now, CPF="15746546240", Type=PersonTypeEnum.Administrator }
                 );
         }
 
@@ -38,6 +43,7 @@ namespace Infra.Data.Repository.Data
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Occurrence> Occurrences { get; set;}
         public DbSet<Person> People { get; set; }
+        public DbSet<Resolution> Resolutions { get; set; }
         #endregion
     }
 }

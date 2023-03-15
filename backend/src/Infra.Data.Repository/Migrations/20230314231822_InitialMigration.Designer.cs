@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infra.Data.Repository.Migrations
 {
     [DbContext(typeof(MySqlContext))]
-    [Migration("20230312011100_InitialMigration")]
+    [Migration("20230314231822_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -96,7 +96,7 @@ namespace Infra.Data.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Birth")
+                    b.Property<DateTime?>("Birth")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("CPF")
@@ -119,7 +119,6 @@ namespace Infra.Data.Repository.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<int>("Type")
@@ -133,15 +132,43 @@ namespace Infra.Data.Repository.Migrations
                         new
                         {
                             Id = 1,
-                            Birth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CPF = "15746546240",
-                            CreatedOn = new DateTime(2023, 3, 11, 22, 11, 0, 656, DateTimeKind.Local).AddTicks(8972),
+                            CreatedOn = new DateTime(2023, 3, 14, 20, 18, 22, 33, DateTimeKind.Local).AddTicks(2718),
                             Email = "admin@gmail.com",
                             Name = "Admin",
                             Password = "admin",
-                            Phone = "47988887777",
                             Type = 0
                         });
+                });
+
+            modelBuilder.Entity("Domain.Entities.Resolution", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("IdOccurrence")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Spending")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdOccurrence")
+                        .IsUnique();
+
+                    b.ToTable("Resolutions");
                 });
 
             modelBuilder.Entity("Domain.Entities.Occurrence", b =>
@@ -163,10 +190,26 @@ namespace Infra.Data.Repository.Migrations
                     b.Navigation("Person");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Resolution", b =>
+                {
+                    b.HasOne("Domain.Entities.Occurrence", "Occurrence")
+                        .WithOne("Resolution")
+                        .HasForeignKey("Domain.Entities.Resolution", "IdOccurrence")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Occurrence");
+                });
+
             modelBuilder.Entity("Domain.Entities.Address", b =>
                 {
                     b.Navigation("Occurrence")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.Entities.Occurrence", b =>
+                {
+                    b.Navigation("Resolution");
                 });
 
             modelBuilder.Entity("Domain.Entities.Person", b =>
