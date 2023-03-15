@@ -19,7 +19,7 @@
         <option value="2">Two</option>
         <option value="3">Three</option>
       </select>
-      <button type="button" class="btn btn-dark">Pesquisar</button>
+      <button type="button" class="btn btn-dark">Adicionar</button>
     </div>
     <div class="card-list container align-center mx-auto p-5 mt-3">
       <div *ngFor="let occurrence of listOccurrence" class="card mx-auto mb-3 cards">
@@ -27,7 +27,9 @@
           <h5 class="card-title my-auto">{{occurrence.id}}</h5>
           <p class="card-text my-auto">{{occurrence.address.street}}, {{occurrence.address.number}} - Bairro {{occurrence.address.district}}</p>
           <p class="card-text my-auto">{{occurrence.createdOn | date:'MM/dd/yyyy'}}</p>
-          <p href="#" class="btn btn-primary my-auto">{{occurrence.status}}</p>
+          <p *ngIf="occurrence.status==0" style="background-color: #428BFF; border-color: transparent;" href="#" class="btn btn-primary my-auto">Ciente</p>
+          <p *ngIf="occurrence.status==1" style="background-color: #FFBF1B; border-color: transparent;" href="#" class="btn btn-primary my-auto">Em Andamento</p>
+          <p *ngIf="occurrence.status==2" style="background-color: #6FC63A; border-color: transparent;" href="#" class="btn btn-primary my-auto">Resolvido</p>
         </div>
       </div>
     </div>
