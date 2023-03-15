@@ -1,54 +1,68 @@
 <div>
-    <img src="/assets/img/Logo.svg" class="logo" />
+  <img src="/assets/img/Logo.svg" class="logo" />
 
-    <div class="main-content">
-
-        <div class="topics-container">
-
-            <div class="topics">
-                <div class="topic-img">
-                    <img src="/assets/img/Check Icon.svg" width="80px" height="80px" />
-                </div>
-                <div class="topic-text">
-                    <p class="topic-description">Nosso objetivo é facilitar a comunicação entre a população e a
-                        prefeitura de sua região, visando a melhoria da qualidade de vida e do bem-estar de todos.
-                    </p>
-                </div>
-            </div>
-
-            <div class="topics">
-                <div class="topic-img">
-                    <img src="/assets/img/Communication Icon.svg" width="80px" height="80px" />
-                </div>
-                <div class="topic-text">
-                    <p class="topic-description">Com isso em mente, criamos este canal de comunicação, onde os
-                        usuários
-                        possam reportar ocorrências de sua cidade e acompanhar o andamento das resoluções em tempo
-                        real.
-                    </p>
-                </div>
-            </div>
-
-            <div class="topics">
-                <div class="topic-img">
-                    <img class="topic-img-3" src="/assets/img/Search Icon.svg" width="80px" height="80px" />
-                </div>
-                <div class="topic-text">
-                    <p class="topic-description">Com o Zelo BR facilitamos o gerenciamento de ocorrências para a
-                        prefeitura, enquanto disponibilizamos informações com transparência para a população,
-                        firmando a
-                        confiança entre usuário e governança de maneira mais simples e acessível.
-                    </p>
-                </div>
-            </div>
+  <button (click)="openModal()" data-testid="button-login">
+    Abrir Modal
+  </button>
+  <div class="main-content">
+    <div class="topics-container">
+      <div class="topics">
+        <div class="topic-img">
+          <img src="/assets/img/Check Icon.svg" width="80px" height="80px" />
         </div>
-
-        <div class="video-container">
-            <h2 class="video-title">Como usar</h2>
-            <div class="video">
-                <!-- VIDEO GOES HERE -->
-            </div>
-            <button class="start-btn">Cadastre-se</button>
+        <div class="topic-text">
+          <p class="topic-description">
+            Nosso objetivo é facilitar a comunicação entre a população e a
+            prefeitura de sua região, visando a melhoria da qualidade de vida e
+            do bem-estar de todos.
+          </p>
         </div>
+      </div>
+
+      <div class="topics">
+        <div class="topic-img">
+          <img
+            src="/assets/img/Communication Icon.svg"
+            width="80px"
+            height="80px"
+          />
+        </div>
+        <div class="topic-text">
+          <p class="topic-description">
+            Com isso em mente, criamos este canal de comunicação, onde os
+            usuários possam reportar ocorrências de sua cidade e acompanhar o
+            andamento das resoluções em tempo real.
+          </p>
+        </div>
+      </div>
+
+      <div class="topics">
+        <div class="topic-img">
+          <img
+            class="topic-img-3"
+            src="/assets/img/Search Icon.svg"
+            width="80px"
+            height="80px"
+          />
+        </div>
+        <div class="topic-text">
+          <p class="topic-description">
+            Com o Zelo BR facilitamos o gerenciamento de ocorrências para a
+            prefeitura, enquanto disponibilizamos informações com transparência
+            para a população, firmando a confiança entre usuário e governança de
+            maneira mais simples e acessível.
+          </p>
+        </div>
+      </div>
     </div>
+
+    <div class="video-container">
+      <h2 class="video-title">Como usar</h2>
+      <div class="video">
+        <!-- VIDEO GOES HERE -->
+      </div>
+      <button class="start-btn">Cadastre-se</button> 
+
+    <ng-container #modal></ng-container>
+  </div>
 </div>

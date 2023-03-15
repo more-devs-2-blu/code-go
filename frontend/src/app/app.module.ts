@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { OccurrenceComponent } from './components/occurrence/occurrence.component';
 import { ListOccurrenceComponent } from './components/list-occurrence/list-occurrence.component';
+import { DynamicModalComponent } from './components/dynamic-modal/dynamic-modal.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ListOccurrenceComponent } from './components/list-occurrence/list-occur
     LoginComponent,
     RegisterComponent,
     OccurrenceComponent,
-    ListOccurrenceComponent
+    ListOccurrenceComponent,
+    DynamicModalComponent
   ],
   imports: [
     BrowserModule,
