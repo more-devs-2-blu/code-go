@@ -34,6 +34,7 @@ namespace Application.Service.MySQLServices
                     status = x.Status,
                     createdOn = x.CreatedOn,
                     expectedDate = x.ExpectedDate,
+                    category = x.Category,
                     frequency = x.Frequency,
                     image = x.Image,
                     address = new AddressDTO()

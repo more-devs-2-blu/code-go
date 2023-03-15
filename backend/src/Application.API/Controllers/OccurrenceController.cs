@@ -13,11 +13,13 @@ namespace Application.API.Controllers
     {
         private readonly IOccurrenceService _occurrenceService;
         private readonly IOccurrenceRepository _occurrenceRepository;
-        public OccurrenceController(IOccurrenceService occurrenceService, IOccurrenceRepository occurrenceRepository)
+        private readonly IAddressService _addressService;
+
+        public OccurrenceController(IOccurrenceService occurrenceService, IOccurrenceRepository occurrenceRepository, IAddressService addressService)
         {
             _occurrenceRepository = occurrenceRepository;
             _occurrenceService = occurrenceService;
-
+            _addressService = addressService;
         }
 
         // GET: api/<OccurrenceController>
@@ -74,6 +76,47 @@ namespace Application.API.Controllers
             foreach (var item in teste)
             {
                 if ((int)item.status == id)
+                {
+                    lista.Add(item);
+                }
+            }
+
+            return lista;
+
+        }
+        [HttpGet("District/{id}")]
+        public async Task<ActionResult<List<OccurrenceDTO>>> GetAllByDistrict(string district)
+        {
+            List<OccurrenceDTO> lista = new List<OccurrenceDTO>();
+
+            var teste = _addressService.FindAll();
+            List<int> ids = new List<int>();
+            foreach (var item in teste)
+            {
+                if (item.district == district)
+                {
+                    ids.Add(item.id);
+                }
+            }
+            foreach (var id in ids)
+            {
+                OccurrenceDTO occurrence = await _occurrenceService.FindById(id);
+                lista.Add(occurrence);
+            }
+            return lista;
+
+        }
+
+        [HttpGet("Category/{id}")]
+        public async Task<ActionResult<List<OccurrenceDTO>>> GetAllByCategory(int id)
+        {
+            List<OccurrenceDTO> lista = new List<OccurrenceDTO>();
+
+            var teste = _occurrenceService.FindAll();
+
+            foreach (var item in teste)
+            {
+                if ((int)item.category == id)
                 {
                     lista.Add(item);
                 }

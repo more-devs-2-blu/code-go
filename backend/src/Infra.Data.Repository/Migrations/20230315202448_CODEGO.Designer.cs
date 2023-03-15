@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infra.Data.Repository.Migrations
 {
     [DbContext(typeof(MySqlContext))]
-    [Migration("20230314231822_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20230315202448_CODEGO")]
+    partial class CODEGO
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,6 +57,9 @@ namespace Infra.Data.Repository.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("Category")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedOn")
@@ -133,7 +136,7 @@ namespace Infra.Data.Repository.Migrations
                         {
                             Id = 1,
                             CPF = "15746546240",
-                            CreatedOn = new DateTime(2023, 3, 14, 20, 18, 22, 33, DateTimeKind.Local).AddTicks(2718),
+                            CreatedOn = new DateTime(2023, 3, 15, 17, 24, 48, 366, DateTimeKind.Local).AddTicks(2853),
                             Email = "admin@gmail.com",
                             Name = "Admin",
                             Password = "admin",
