@@ -1,4 +1,5 @@
 ﻿using Domain.DTO;
+using Domain.Interfeces.IRepositories;
 using Domain.Interfeces.IServices;
 using Infra.Data.Repository.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -11,10 +12,12 @@ namespace Application.API.Controllers
     public class OccurrenceController : ControllerBase
     {
         private readonly IOccurrenceService _occurrenceService;
-
-        public OccurrenceController(IOccurrenceService occurrenceService)
+        private readonly IOccurrenceRepository _occurrenceRepository;
+        public OccurrenceController(IOccurrenceService occurrenceService, IOccurrenceRepository occurrenceRepository)
         {
+            _occurrenceRepository = occurrenceRepository;
             _occurrenceService = occurrenceService;
+
         }
 
         // GET: api/<OccurrenceController>
@@ -42,6 +45,25 @@ namespace Application.API.Controllers
 
             return Ok(occurrence);
         }
+
+        [HttpGet("IdPerson/{id}")]
+        public async Task<ActionResult<OccurrenceDTO>> GetAllByIdPerson(int id)
+        {
+            OccurrenceDTO occurrence = new OccurrenceDTO();
+
+            try
+            {
+                occurrence = (OccurrenceDTO)_occurrenceRepository.GetAllByPersonId(id);
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
+
+            return Ok(occurrence);
+        }
+        
+
 
         // POST api/<OccurrenceController>
         [HttpPost]

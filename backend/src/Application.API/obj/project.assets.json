@@ -7223,24 +7223,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yasmi\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\jails\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ZeloBR\\code-go\\backend\\src\\Application.API\\Application.API.csproj",
+      "projectUniqueName": "D:\\Projetos\\code-go\\backend\\src\\Application.API\\Application.API.csproj",
       "projectName": "Application.API",
-      "projectPath": "C:\\ZeloBR\\code-go\\backend\\src\\Application.API\\Application.API.csproj",
-      "packagesPath": "C:\\Users\\yasmi\\.nuget\\packages\\",
-      "outputPath": "C:\\ZeloBR\\code-go\\backend\\src\\Application.API\\obj\\",
+      "projectPath": "D:\\Projetos\\code-go\\backend\\src\\Application.API\\Application.API.csproj",
+      "packagesPath": "C:\\Users\\jails\\.nuget\\packages\\",
+      "outputPath": "D:\\Projetos\\code-go\\backend\\src\\Application.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\yasmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\jails\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7254,14 +7249,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\ZeloBR\\code-go\\backend\\src\\Application.Service\\Application.Service.csproj": {
-              "projectPath": "C:\\ZeloBR\\code-go\\backend\\src\\Application.Service\\Application.Service.csproj"
+            "D:\\Projetos\\code-go\\backend\\src\\Application.Service\\Application.Service.csproj": {
+              "projectPath": "D:\\Projetos\\code-go\\backend\\src\\Application.Service\\Application.Service.csproj"
             },
-            "C:\\ZeloBR\\code-go\\backend\\src\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\ZeloBR\\code-go\\backend\\src\\Domain\\Domain.csproj"
+            "D:\\Projetos\\code-go\\backend\\src\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\Projetos\\code-go\\backend\\src\\Domain\\Domain.csproj"
             },
-            "C:\\ZeloBR\\code-go\\backend\\src\\Infra.Data.Repository\\Infra.Data.Repository.csproj": {
-              "projectPath": "C:\\ZeloBR\\code-go\\backend\\src\\Infra.Data.Repository\\Infra.Data.Repository.csproj"
+            "D:\\Projetos\\code-go\\backend\\src\\Infra.Data.Repository\\Infra.Data.Repository.csproj": {
+              "projectPath": "D:\\Projetos\\code-go\\backend\\src\\Infra.Data.Repository\\Infra.Data.Repository.csproj"
             }
           }
         }
@@ -7328,7 +7323,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -7377,6 +7372,36 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+      "message": "O pacote 'Microsoft.AspNet.WebApi.OData 5.7.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.AspNet.WebApi.OData",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Data.Edm 5.6.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Data.Edm",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Data.OData 5.6.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Data.OData",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
       "message": "O pacote 'MySql.Data 6.8.3' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "MySql.Data",
       "targetGraphs": [
@@ -7397,7 +7422,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'System.Spatial 5.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "O pacote 'System.Spatial 5.6.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "System.Spatial",
       "targetGraphs": [
         "net6.0"

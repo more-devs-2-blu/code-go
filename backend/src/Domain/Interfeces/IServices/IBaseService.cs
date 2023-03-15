@@ -10,6 +10,8 @@ namespace Domain.Interfeces.IServices
     {
         List<T> FindAll();
         Task<T> FindById(int id);
+
+        Task<T> FindByIdPerson(int id);
         Task<int> Save(T entityDTO);
         Task<int> Update(T entityDTO);
         Task<int> Delete(int id);

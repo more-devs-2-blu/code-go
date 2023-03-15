@@ -121,5 +121,10 @@ namespace Application.Service.MySQLServices
             var entity = await _occurrenceRepository.FindById(id);
             return await _occurrenceRepository.Delete(entity);
         }
+
+        public Task<OccurrenceDTO> FindByIdPerson(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
