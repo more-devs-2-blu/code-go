@@ -64,6 +64,25 @@ namespace Application.API.Controllers
             return lista;
         }
 
+        [HttpGet("Status/{id}")]
+        public async Task<ActionResult<List<OccurrenceDTO>>> GetAllByStatusId(int id)
+        {
+            List<OccurrenceDTO> lista = new List<OccurrenceDTO>();
+
+            var teste = _occurrenceService.FindAll();
+
+            foreach (var item in teste)
+            {
+                if ((int)item.status == id)
+                {
+                    lista.Add(item);
+                }
+            }
+
+            return lista;
+
+        }
+
         // POST api/<OccurrenceController>
         [HttpPost]
         public async Task<ActionResult<OccurrenceDTO>> Post([FromBody] OccurrenceDTO occurrence)
