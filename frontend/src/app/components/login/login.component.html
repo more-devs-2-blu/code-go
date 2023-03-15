@@ -19,7 +19,7 @@
             </form>
         </div>
         <div *ngIf="formularioLogin" class="form-container sign-in-container" href="">
-            <form [formGroup]="formularioLogin" action="#" (ngSubmit)="enviarLogin()">
+            <form [formGroup]="formularioLogin" action="#" >
                 <h2>Entre</h2>
                 <input formControlName= "email" type="email" placeholder="Email" />
                 <input formControlName= "password" type="password" placeholder="Senha" />
