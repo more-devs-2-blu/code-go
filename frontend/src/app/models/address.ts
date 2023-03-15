@@ -1,0 +1,1 @@
+import { Occurrence } from './occurrence';
