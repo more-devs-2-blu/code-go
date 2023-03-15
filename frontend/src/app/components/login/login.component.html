@@ -1,1 +1,39 @@
-<p>login works!</p>
+<main>
+    <!-- <h1 style="color: rgba(0, 0, 0, 0)">Weekly Coding Challenge #1: Sign in/up Form</h1> -->
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h2>Cadastre-se</h2>
+                <input type="text" placeholder="Nome" />                    
+                <input type="cpf" placeholder="CPF" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Senha" />
+                <button class="form-btn">Cadastrar</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container" href="">
+            <form action="#">
+                <h2>Entre</h2>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Senha" />
+                <button class="form-btn">Entrar</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h2>Bem-vindo(a)!</h2>
+                    <p>Por favor preencha suas informações ao lado para efetuar seu cadastro.</p><br>
+                    <p>Já possui um cadastro?</p>
+                    <button class="ghost" id="signIn">Entrar</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h2>Olá!</h2>
+                    <p>Digite suas informações ao lado para iniciar sua experiência conosco.</p><br>
+                    <p>Ainda não possui um cadastro?</p>
+                    <button class="ghost" id="signUp">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
