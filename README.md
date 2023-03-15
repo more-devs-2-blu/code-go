@@ -1,6 +1,6 @@
 # EQUIPE CODE-GO · ZELO BR · HACKATHON +DEVS2BLU
 
-![Logo](https://user-images.githubusercontent.com/109560393/225177306-e1d7eae2-ab78-4e0b-857c-b6b8c0787704.png)
+![LogoGithub](https://user-images.githubusercontent.com/109560393/225184182-000c586f-2228-4938-a39f-8a18fe6c7dd3.png)
 ### Desafio B: Como um cidadão pode ajudar na zeladoria pública de sua cidade?
 
 Nosso objetivo é desenvolver um projeto que facilite de modo intuitivo a interação entre população e prefeitura.
