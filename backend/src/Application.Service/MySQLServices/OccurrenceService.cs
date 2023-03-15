@@ -1,5 +1,6 @@
 ﻿using Domain.DTO;
 using Domain.Entities;
+using Domain.Enums;
 using Domain.Interfeces.IRepositories;
 using Domain.Interfeces.IServices;
 using System;
@@ -14,14 +15,12 @@ namespace Application.Service.MySQLServices
     {
         private readonly IOccurrenceRepository _occurrenceRepository;
         private readonly IAddressRepository _addressRepository;
-        private readonly OccurrenceDTO _occurrenceDTO;
 
         public OccurrenceService(IOccurrenceRepository occurrenceRepository,
                                  IAddressRepository addressRepository)
         {
             _occurrenceRepository = occurrenceRepository;
             _addressRepository = addressRepository;
-            _occurrenceDTO = new OccurrenceDTO();
         }
 
         public List<OccurrenceDTO> FindAll()
@@ -48,6 +47,37 @@ namespace Application.Service.MySQLServices
                     }
                 }).ToList();
         }
+
+        public List<OccurrenceDTO> GetAllByPersonId(int personId)
+        {
+            return _occurrenceRepository.FindAll()
+                .Select(x => new OccurrenceDTO()
+                {
+                    id = x.Id,
+                    idPerson = x.IdPerson,
+                    idAddress = x.IdAddress,
+                    status = x.Status,
+                    createdOn = x.CreatedOn,
+                    expectedDate = x.ExpectedDate,
+                    frequency = x.Frequency,
+                    image = x.Image,
+                    address = new AddressDTO()
+                    {
+                        id = x.Address.Id,
+                        street = x.Address.Street,
+                        number = x.Address.Number,
+                        district = x.Address.District,
+                        city = x.Address.City,
+                        state = x.Address.State
+                    }
+                }).ToList();
+        }
+
+        public List<OccurrenceDTO> GetAllByStatus(StatusEnum status)
+        {
+            throw new NotImplementedException();
+        }
+
 
         public async Task<OccurrenceDTO> FindById(int id)
         {

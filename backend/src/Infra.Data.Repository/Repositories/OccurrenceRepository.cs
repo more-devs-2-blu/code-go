@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Domain.Enums;
 using Domain.Interfeces.IRepositories;
 using Infra.Data.Repository.Data;
 using System;
@@ -22,6 +23,12 @@ namespace Infra.Data.Repository.Repositories
         {
             return _context.Set<Occurrence>()
                 .Where(occurrence => occurrence.IdPerson == personId);
+        }
+
+        public IQueryable<Occurrence> GetAllByStatus(StatusEnum status)
+        {
+            return _context.Set<Occurrence>()
+                .Where(occurrence => occurrence.Status == status);
         }
     }
 }

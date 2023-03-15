@@ -33,11 +33,13 @@ builder.Services.AddDbContext<MySqlContext>
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IAddressRepository, AddressRepository>();
 builder.Services.AddScoped<IOccurrenceRepository, OccurrenceRepository>();
+builder.Services.AddScoped<IResolutionRepository, ResolutionRepository>();
 
 // Services
 builder.Services.AddScoped<IPersonService, PersonService>();
 builder.Services.AddScoped<IAddressService, AddressService>();
 builder.Services.AddScoped<IOccurrenceService, OccurrenceService>();
+builder.Services.AddScoped<IResolutionService, ResolutionService>();
 
 var app = builder.Build();
 

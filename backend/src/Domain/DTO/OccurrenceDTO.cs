@@ -19,7 +19,8 @@ namespace Domain.DTO
         public int frequency { get; set; }
         public string? image { get; set; }
 
-        public virtual AddressDTO address { get; set; }
+        public virtual AddressDTO? address { get; set; }
+        public virtual ResolutionDTO? Resolution { get; set; }
 
         #region Methods
         public Occurrence MapToEntity()
