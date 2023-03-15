@@ -1,0 +1,40 @@
+.filters {
+  background-color: #2864ae;
+  width: 200px;
+  height: 60px;
+  padding: 8px 0px 8px;
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: white;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  margin-top: 5rem;
+}
+
+.filters-img {
+  padding-right: 15px;
+}
+
+.categories {
+  width: 80rem;
+  background-color: #808080;
+  margin-bottom: 5px;
+  border-radius: 0px 10px 10px 10px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-list{
+  border: #80808040 1px solid;
+  border-radius: 20px;
+  box-shadow: 1px 3px #80808040, -2px  0.4em #80808040
+
+}
+
+.cards{
+  background-color: #b7b7b7a6;
+  border: none;
+}

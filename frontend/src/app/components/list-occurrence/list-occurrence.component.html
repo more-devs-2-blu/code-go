@@ -1,1 +1,36 @@
-<p>list-occurrence works!</p>
+<div class="ms-5 container justify-content-center">
+<div class="filters"><img class="filters-img" src="/assets/img/Tag.svg">Filtros</div>
+    <div class="categories p-3 d-flex justify-content-between ">
+      <select class="form-select w-25" aria-label="Default select example">
+        <option selected>Bairro</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <select class="form-select w-25" aria-label="Default select example">
+        <option selected>Categoria</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <select class="form-select w-25" aria-label="Default select example">
+        <option selected>Status</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <button type="button" class="btn btn-dark">Pesquisar</button>
+    </div>
+    <div class="card-list container align-center mx-auto p-5 mt-3">
+      <!-- Cards clicáveis -->
+      <div *ngFor="let occurrence of listOccurrence" class="card mx-auto mb-3 cards">
+        <div class="card-body d-flex justify-content-between my-auto">
+          <h5 class="card-title my-auto">{{occurrence.id}}</h5>
+          <p class="card-text my-auto">{{occurrence.address.street}}, {{occurrence.address.number}} - Bairro {{occurrence.address.district}}</p>
+          <p class="card-text my-auto">{{occurrence.createdOn | date:'MM/dd/yyyy'}}</p>
+          <p href="#" class="btn btn-primary my-auto">{{occurrence.status}}</p>
+        </div>
+      </div>
+    </div>
+</div>
+

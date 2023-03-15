@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: "CorsPolicy",
         builder =>
         {
-            builder.WithOrigins("*");
+            builder.WithOrigins("http://localhost:4200");
             builder.AllowAnyHeader();
             builder.AllowAnyMethod();
             builder.AllowAnyOrigin();
@@ -23,6 +23,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 
 string ConnectionString = builder.Configuration.GetConnectionString("MySQLConnection");
 builder.Services.AddDbContext<MySqlContext>
@@ -40,6 +41,14 @@ builder.Services.AddScoped<IPersonService, PersonService>();
 builder.Services.AddScoped<IAddressService, AddressService>();
 builder.Services.AddScoped<IOccurrenceService, OccurrenceService>();
 builder.Services.AddScoped<IResolutionService, ResolutionService>();
+
+//builder.Services.AddCors(
+//    options => options.AddPolicy(name: "ZeloBrOrigin",
+//        policy =>
+//        {
+//            policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+//        })
+//    );
 
 var app = builder.Build();
 
