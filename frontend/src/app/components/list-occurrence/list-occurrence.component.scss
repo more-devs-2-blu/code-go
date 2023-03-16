@@ -104,27 +104,31 @@
   align-content: center;
   justify-content: center;
 }
-.textStreet{
+
+.textStreet {
   border-radius: 5px;
   margin-bottom: 20px;
   background-color: #e8e8e8
 }
 
-.textDistrict{
+.textDistrict {
   border-radius: 5px;
   margin-bottom: 20px;
   background-color: #e8e8e8
 }
-.textCity{
+
+.textCity {
   border-radius: 5px;
   margin-bottom: 20px;
   background-color: #e8e8e8
 }
-.textDescription{
+
+.textDescription {
   border-radius: 5px;
   margin-bottom: 20px;
   background-color: #e8e8e8
 }
+
 .text {
   padding: 10px;
   size: 20px;
@@ -133,19 +137,17 @@
   margin-bottom: auto;
   color: #575757;
 }
-.textStatus{
-  border-top: 1px solid #3c3c3c ;
-  border-bottom:1px solid #3c3c3c;
+
+.textStatus {
+  border-top: 1px solid #3c3c3c;
+  border-bottom: 1px solid #3c3c3c;
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
 }
-.statusbox{
+
+.statusbox {
   margin-left: auto;
-}
-
-#modal-add {
-
 }
 
 .input-box input {
@@ -154,4 +156,37 @@
   background-color: #e8e8e8;
   width: 390px;
   height: 50px;
+}
+
+.modal-add-title {
+  background-color: #3c3c3c;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  width: 390px;
+  height: 45px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.input-text {
+  padding-left: 10px;
+}
+
+#btn-cancel {
+  font-weight: bold;
+  font-size: larger;
+  color: white;
+  border: none;
+  background-color: #c71323;
+}
+
+#btn-save {
+  font-weight: bold;
+  font-size: larger;
+  color: white;
+  border: none;
+  background-color: #72c742;
 }
