@@ -1,41 +1,101 @@
 <div class="container justify-content-center" style="margin-top:8rem;">
-<div class="filters"><img class="filters-img" src="/assets/img/Tag.svg">Filtros</div>
-    <div class="categories p-3 d-flex justify-content-between ">
-      <select [(ngModel)]="districtSelecionado" (change)="GetByDistrict($event.target)" class="form-select w-25" aria-label="Default select example">
-        <option value="0">Centro</option>
-        <option value="1">Velha</option>
-        <option value="2">Victor Konder</option>
-      </select>
-      <select [(ngModel)]="categorySelecionado" (change)="GetByCategory($event.target)" class="form-select w-25" aria-label="Default select example">
-        <option value="0">Alagamento regional</option>
-        <option value="1">Terreno irregular</option>
-        <option value="2">Irregularidade na estrada</option>
-      </select>
-        <select [(ngModel)]="statusSelecionado" (change)="GetByStatus($event.target)" class="form-select w-25" aria-label="Default select example">
-          <option value="0">Ciente</option>
-          <option value="1">Em Andamento</option>
-          <option value="2">Resolvido</option>
-        </select>
-     <button type="button" class="btn btn-dark" routerLink="/register">Adicionar</button>
-    </div>
-    <div class="card-list container align-center mx-auto p-5 mt-3">
-      <div *ngFor="let occurrence of listOccurrence" class="card mx-auto mb-3 cards">
-        <div class="card-body d-flex justify-content-between my-auto">
-          <h5 class="card-title my-auto">{{occurrence.id}}</h5>
-          <p class="card-text my-auto">{{occurrence.address.street}}, {{occurrence.address.number}} - Bairro {{occurrence.address.district}}</p>
-          <p *ngIf="occurrence.category==0"  class="my-auto">Alagamento regional</p>
-          <p *ngIf="occurrence.category==1" class="my-auto">Terreno irregular</p>
-          <p *ngIf="occurrence.category==2" class="my-auto">Irregularidade na estrada</p>
-          <p class="card-text my-auto">{{occurrence.createdOn | date:'MM/dd/yyyy'}}</p>
-          <p *ngIf="occurrence.status==0"  style="background-color: #428BFF; border-color: transparent;" href="#" class="btn btn-primary my-auto">Ciente</p>
-          <p *ngIf="occurrence.status==1" style="background-color: #FFBF1B; border-color: transparent;" href="#" class="btn btn-primary my-auto">Em Andamento</p>
-          <p *ngIf="occurrence.status==2" style="background-color: #6FC63A; border-color: transparent;" href="#" class="btn btn-primary my-auto">Resolvido</p>
-          <svg *ngIf="login =='0'" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="height: 2.5rem;">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"></path>
-          </svg>
-          <button *ngIf="login !='0'" type="button" class="btn btn-dark">Detalhes</button>
+  <div class="filters"><img class="filters-img" src="/assets/img/Tag.svg">Filtros</div>
+  <div class="categories p-3 d-flex justify-content-between ">
+    <select [(ngModel)]="districtSelecionado" (change)="GetByDistrict($event.target)" class="form-select w-25"
+      aria-label="Default select example">
+      <option value="0">Centro</option>
+      <option value="1">Velha</option>
+      <option value="2">Victor Konder</option>
+    </select>
+    <select [(ngModel)]="categorySelecionado" (change)="GetByCategory($event.target)" class="form-select w-25"
+      aria-label="Default select example">
+      <option value="0">Alagamento regional</option>
+      <option value="1">Terreno irregular</option>
+      <option value="2">Irregularidade na estrada</option>
+    </select>
+    <select [(ngModel)]="statusSelecionado" (change)="GetByStatus($event.target)" class="form-select w-25"
+      aria-label="Default select example">
+      <option value="0">Ciente</option>
+      <option value="1">Em Andamento</option>
+      <option value="2">Resolvido</option>
+    </select>
+    <button type="button" class="btn btn-dark" routerLink="/register">Adicionar</button>
+  </div>
+  <div class="card-list container align-center mx-auto p-5 mt-3">
+    <div *ngFor="let occurrence of listOccurrence" class="card mx-auto mb-3 cards">
+      <div class="card-body d-flex justify-content-between my-auto">
+        <h5 class="card-title my-auto">{{occurrence.id}}</h5>
+        <p class="card-text my-auto">{{occurrence.address.street}}, {{occurrence.address.number}} - Bairro
+          {{occurrence.address.district}}</p>
+        <p *ngIf="occurrence.category==0" class="my-auto">Alagamento regional</p>
+        <p *ngIf="occurrence.category==1" class="my-auto">Terreno irregular</p>
+        <p *ngIf="occurrence.category==2" class="my-auto">Irregularidade na estrada</p>
+        <p class="card-text my-auto">{{occurrence.createdOn | date:'MM/dd/yyyy'}}</p>
+        <p *ngIf="occurrence.status==0" style="background-color: #428BFF; border-color: transparent;" href="#"
+          class="btn btn-primary my-auto">Ciente</p>
+        <p *ngIf="occurrence.status==1" style="background-color: #FFBF1B; border-color: transparent;" href="#"
+          class="btn btn-primary my-auto">Em Andamento</p>
+        <p *ngIf="occurrence.status==2" style="background-color: #6FC63A; border-color: transparent;" href="#"
+          class="btn btn-primary my-auto">Resolvido</p>
+        <svg *ngIf="login =='0'" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="height: 2.5rem;">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10">
+          </path>
+        </svg>
+        <button *ngIf="login != '0'" type="button" class="btn btn-dark" data-bs-toggle="modal"
+          data-bs-target="#exampleModal" (click)="selectOccurrence(occurrence)">Detalhes</button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="textCategory">
+                  <dd *ngIf="occurrenceSelected?.category==0" class="category card-tex">Alagamento regional</dd>
+                  <dd *ngIf="occurrenceSelected?.category==1" class="category card-tex">Terreno irregular</dd>
+                  <dd *ngIf="occurrenceSelected?.category==2" class="category card-tex">Irregularidade na estrada</dd>
+                  <p class="card-text category " style="text-align: right;">{{occurrenceSelected?.createdOn |
+                    date:'MM/dd/yyyy'}}</p>
+                </h5>
+                <div class="closebtn">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+              </div>
+              <div class="modal-body">
+                <dl class="row">
+                  <div class="textStreet">
+                    <dd class="text col-sm-9">{{ occurrenceSelected?.address?.street }}, {{
+                      occurrenceSelected?.address?.number}}</dd>
+                  </div>
+                  <div class="textDistrict">
+                    <dd class="text col-sm-9">{{ occurrenceSelected?.address?.district }} </dd>
+                  </div>
+                  <div class="textCity">
+                    <dd class="text col-sm-9">{{ occurrenceSelected?.address?.city }} </dd>
+                  </div>
+                  <div class="textDecription">
+                    <dd class="text col-sm-9">Descrição: {{ occurrenceSelected?.desciption }} </dd>
+                  </div>
+                  <div class="textStatus">
+                    <dt class="text col-sm-3">Status:</dt>
+                    <div class="statusbox">
+                      <p *ngIf="occurrenceSelected?.status==0"
+                        style="background-color: #428BFF; border-color: transparent;" href="#"
+                        class="btn btn-primary my-auto">Ciente</p>
+                      <p *ngIf="occurrenceSelected?.status==1"
+                        style="background-color: #FFBF1B; border-color: transparent;" href="#"
+                        class="btn btn-primary my-auto">Em Andamento</p>
+                      <p *ngIf="occurrenceSelected?.status==2"
+                        style="background-color: #6FC63A; border-color: transparent;" href="#"
+                        class="btn btn-primary my-auto">Resolvido</p>
+                    </div>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
-</div>
-
+  </div>
