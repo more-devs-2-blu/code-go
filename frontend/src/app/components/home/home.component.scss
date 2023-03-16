@@ -3,7 +3,7 @@
 .main-content {
   display: flex;
   flex-direction: row;
-  margin: 0px 8rem;
+  margin: 0 15rem 0 15rem;
   align-items: center;
 }
 
@@ -18,14 +18,14 @@
 }
 
 .topics {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem;  
   width: fit-content;
   display: flex;
   text-align: justify;
 }
 
 .topics-container {
-  margin-right: 12rem;
+  margin-right: 15rem;  
 }
 
 .topics:nth-of-type(2) {
