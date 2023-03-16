@@ -42,7 +42,7 @@ namespace Application.API.Controllers
 
         // GET api/<PersonController>/{id}
         [HttpGet("login/{email}&{senha}")]
-        public async Task<bool> GetLogin(string email, string senha)
+        public async Task<PersonDTO> GetLogin(string email, string senha)
         {
             var person = _personService.FindAll();
 
@@ -50,11 +50,11 @@ namespace Application.API.Controllers
             {
                 if(item.email == email && item.password == senha)
                 {
-                    return true;
+                    return item;
                 }
             }
 
-            return false;
+            return null;
         }
 
         // POST api/<PersonController>
