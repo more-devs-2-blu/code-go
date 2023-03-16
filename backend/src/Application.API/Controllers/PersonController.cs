@@ -40,6 +40,23 @@ namespace Application.API.Controllers
             return Ok(person);
         }
 
+        // GET api/<PersonController>/{id}
+        [HttpGet("login/{email}&{senha}")]
+        public async Task<bool> GetLogin(string email, string senha)
+        {
+            var person = _personService.FindAll();
+
+            foreach (var item in person)
+            {
+                if(item.email == email && item.password == senha)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         // POST api/<PersonController>
         [HttpPost]
         public async Task<ActionResult<PersonDTO>> Post([FromBody] PersonDTO person)
