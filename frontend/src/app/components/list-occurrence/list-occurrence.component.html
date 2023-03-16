@@ -46,7 +46,9 @@
         <!-- Show Modal Button -->
         <button *ngIf="login != '0'" type="button" class="btn btn-dark" data-bs-toggle="modal"
           data-bs-target="#exampleModal" (click)="selectOccurrence(occurrence)">Detalhes</button>
+
         <!-- Modal Details -->
+
         <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -96,13 +98,16 @@
             </div>
           </div>
         </div> -->
+
+
         <!-- Modal Add New Occurrance -->
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="textCategory">Adicionar nova ocorrência
+                <h5 class="modal-add-title">
+                  Adicionar nova ocorrência
                 </h5>
                 <div class="closebtn">
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -110,37 +115,36 @@
               </div>
               <div class="modal-body" id="modal-add">
                 <form action="#">
-                <div class="input-box">
-                  <input type="text" placeholder="Rua" required>
+                  <div class="input-box">
+                    <input class="input-text" type="text" placeholder="Rua" required>
+                  </div>
+                  <div class="input-box">
+                    <input class="input-text" type="text" placeholder="Bairro" required>
+                  </div>
+                  <div class="input-box">
+                    <input class="input-text" type="text" placeholder="CEP" required>
+                  </div>
+                  <div class="input-box">
+                    <input class="input-text" type="text" placeholder="Cidade" required>
+                  </div>
+                  <select class="form-select" id="form-dropdown">
+                    <option selected id="dropdown-option">Categoria</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                  <div class="btn-box">
+                  <div class="input-box">
+                    <input class="input-text" type="text" placeholder="Descrição" required>
+                  </div>
+                  <div class="input-box button">
+                    <input type="submit" value="Cancel" id="btn-cancel">
+                  </div>
+                  <div class="input-box button">
+                    <input type="submit" value="Save" id="btn-save">
+                  </div>
                 </div>
-                <div class="input-box">
-                  <input type="text" placeholder="Bairro" required>
-                </div>
-                <div class="input-box">
-                  <input type="text" placeholder="CEP" required>
-                </div>
-                <div class="input-box">
-                  <input type="text" placeholder="Cidade" required>
-                </div>
-                <select class="form-select" id="form-dropdown">
-                  <option selected id="dropdown-option">Categoria</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-                <div class="input-box">
-                  <input type="text" placeholder="Categoria" required>
-                </div>
-                <div class="input-box">
-                  <input type="text" placeholder="Descrição" required>
-                </div>      
-                <div class="input-box button">
-                  <input type="close" value="Cancel">
-                </div>
-                <div class="input-box button">
-                  <input type="Submit" value="Save">
-                </div>      
-              </form>
+                </form>
               </div>
             </div>
           </div>
