@@ -11,7 +11,9 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { OccurrenceComponent } from './components/occurrence/occurrence.component';
 import { ListOccurrenceComponent } from './components/list-occurrence/list-occurrence.component';
-import { AddOccurrenceComponent } from './components/add-occurrence/add-occurrence.component';
+import { RegisterOccurranceComponent } from './components/register-occurrance/register-occurrance.component';
+import { OccurranceDetailsComponent } from './components/occurrance-details/occurrance-details.component';
+import { ContributorEditComponent } from './components/contributor-edit/contributor-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AddOccurrenceComponent } from './components/add-occurrence/add-occurren
     RegisterComponent,
     OccurrenceComponent,
     ListOccurrenceComponent,
-    AddOccurrenceComponent
+    RegisterOccurranceComponent,
+    OccurranceDetailsComponent,
+    ContributorEditComponent
   ],
   imports: [
     BrowserModule,

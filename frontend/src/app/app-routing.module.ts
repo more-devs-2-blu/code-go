@@ -1,4 +1,5 @@
-import { AddOccurrenceComponent } from './components/add-occurrence/add-occurrence.component';
+import { ContributorEditComponent } from './components/contributor-edit/contributor-edit.component';
+import { OccurranceDetailsComponent } from './components/occurrance-details/occurrance-details.component';
 import { RegisterComponent } from './components/register/register.component';
 import { OccurrenceComponent } from './components/occurrence/occurrence.component';
 import { LoginComponent } from './components/login/login.component';
@@ -14,7 +15,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'occurrence', component: OccurrenceComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'add-occurrence', component: AddOccurrenceComponent}
+  {path: 'occurrence-details', component: OccurranceDetailsComponent},
+  {path: 'register-occurrence', component: RegisterComponent},
+  {path: 'contributor-edit', component: ContributorEditComponent}
 ];
 
 @NgModule({
