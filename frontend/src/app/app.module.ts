@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { OccurrenceComponent } from './components/occurrence/occurrence.component';
 import { ListOccurrenceComponent } from './components/list-occurrence/list-occurrence.component';
+import { AddOccurrenceComponent } from './components/add-occurrence/add-occurrence.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ListOccurrenceComponent } from './components/list-occurrence/list-occur
     LoginComponent,
     RegisterComponent,
     OccurrenceComponent,
-    ListOccurrenceComponent
+    ListOccurrenceComponent,
+    AddOccurrenceComponent
   ],
   imports: [
     BrowserModule,
