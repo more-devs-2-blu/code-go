@@ -71,6 +71,7 @@ export class LoginComponent implements OnInit {
     console.log(person)
     localStorage.setItem("UserType", "1");
     this.service.postPerson(person).subscribe((resp)=>{
+      console.log("criado",resp);
       this.auth.login().then(()=>{
         this.router.navigate(['/list-occurrence'])
       })
@@ -82,7 +83,9 @@ export class LoginComponent implements OnInit {
 
     this.service.getLogin(person).subscribe((resp)=>{
       console.log(resp);
-      if(resp){
+      if(resp != null){
+        console.log("Login efetuado")
+        localStorage.setItem("UserType",resp.type)
         this.auth.login().then(()=>{
           this.router.navigate(['/list-occurrence'])
         })
