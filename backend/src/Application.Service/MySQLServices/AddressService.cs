@@ -47,5 +47,10 @@ namespace Application.Service.MySQLServices
             var entity = await _addressRepository.FindById(id);
             return await _addressRepository.Delete(entity);
         }
+
+        public Task<AddressDTO> FindByIdPerson(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

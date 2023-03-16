@@ -1,3 +1,4 @@
+import { PersonService } from './services/person.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { OccurrenceComponent } from './components/occurrence/occurrence.component';
 import { ListOccurrenceComponent } from './components/list-occurrence/list-occurrence.component';
+import { DynamicModalComponent } from './components/dynamic-modal/dynamic-modal.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { ListOccurrenceComponent } from './components/list-occurrence/list-occur
     LoginComponent,
     RegisterComponent,
     OccurrenceComponent,
-    ListOccurrenceComponent
+    ListOccurrenceComponent,
+    DynamicModalComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,7 @@ import { ListOccurrenceComponent } from './components/list-occurrence/list-occur
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [HttpClientModule, PersonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

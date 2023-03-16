@@ -1,7 +1,7 @@
 import { PersonService } from './../../services/person.service';
 import { Login } from './../../models/login';
 import { Person } from './../../models/person';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, Type } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
       birth: new FormControl(null),
       email: new FormControl(null),
       password: new FormControl(null),
-      phone: new FormControl(null),
       cpf: new FormControl(null),
       type: new FormControl(null),
       createdOn: new FormControl(null),
@@ -56,14 +55,16 @@ export class LoginComponent implements OnInit {
   }
 
   enviarCadastro():void{
+    //this.formulario.createdOn.value = Date.now();
+    console.log(this.formulario);
     const person: Person = this.formulario.value;
-    this.service.postPerson(person).subscribe(resp=>{
+    this.service.postPerson(person).subscribe((resp)=>{
       alert('Pessoa inserida com sucesso');
     })
   }
 
   enviarLogin():void{
-    
+
   }
 
   // createPerson(person: Person){

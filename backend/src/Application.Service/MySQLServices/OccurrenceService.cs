@@ -34,6 +34,8 @@ namespace Application.Service.MySQLServices
                     status = x.Status,
                     createdOn = x.CreatedOn,
                     expectedDate = x.ExpectedDate,
+                    category = x.Category,
+                    desciption = x.Desciption,
                     frequency = x.Frequency,
                     image = x.Image,
                     address = new AddressDTO()
@@ -120,6 +122,11 @@ namespace Application.Service.MySQLServices
         {
             var entity = await _occurrenceRepository.FindById(id);
             return await _occurrenceRepository.Delete(entity);
+        }
+
+        public Task<OccurrenceDTO> FindByIdPerson(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

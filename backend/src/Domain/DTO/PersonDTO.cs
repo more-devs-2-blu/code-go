@@ -18,7 +18,6 @@ namespace Domain.DTO
         public DateTime? birth { get; set; }
         public string email { get; set; }
         public string password { get; set; }
-        public string? phone { get; set; }
         public DateTime createdOn { get; set; }
         public string cpf { get; set; }
         public PersonTypeEnum type { get; set; }
@@ -36,7 +35,6 @@ namespace Domain.DTO
                 Birth = birth,
                 Email = email,
                 Password = password,
-                Phone = phone,
                 CreatedOn = createdOn,
                 CPF = cpf,
                 Type = type
@@ -52,7 +50,6 @@ namespace Domain.DTO
                 birth = person.Birth,
                 email = person.Email,
                 password = person.Password,
-                phone = person.Phone,
                 createdOn = person.CreatedOn,
                 cpf = person.CPF,
                 type = person.Type

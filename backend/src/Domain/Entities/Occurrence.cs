@@ -17,7 +17,8 @@ namespace Domain.Entities
         public StatusEnum Status { get; set; }
         public int Frequency { get; set; }
         public string? Image { get; set; }
-    
+        public CategoryEnum Category { get; set; }
+        public string? Desciption { get; set; }
         public virtual Person? Person { get; set; }
         public virtual Address? Address { get; set; }
         public virtual Resolution? Resolution { get; set; }

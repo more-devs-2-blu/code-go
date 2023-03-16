@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Domain.DTO;
+using Domain.Entities;
 using Domain.Enums;
 using Domain.Interfeces.IRepositories;
 using Infra.Data.Repository.Data;
@@ -19,10 +20,15 @@ namespace Infra.Data.Repository.Repositories
             _context = context;
         }
 
+        
+
         public IQueryable<Occurrence> GetAllByPersonId(int personId)
         {
-            return _context.Set<Occurrence>()
+
+            IQueryable<Occurrence> teste = _context.Set<Occurrence>()
                 .Where(occurrence => occurrence.IdPerson == personId);
+
+            return teste;
         }
 
         public IQueryable<Occurrence> GetAllByStatus(StatusEnum status)

@@ -18,7 +18,9 @@ namespace Domain.DTO
         public StatusEnum status { get; set; }
         public int frequency { get; set; }
         public string? image { get; set; }
+        public CategoryEnum category { get; set; }
 
+        public string? desciption { get; set; }
         public virtual AddressDTO? address { get; set; }
         public virtual ResolutionDTO? Resolution { get; set; }
 
@@ -33,6 +35,8 @@ namespace Domain.DTO
                 CreatedOn = createdOn,
                 ExpectedDate = expectedDate,
                 Status = status,
+                Desciption = desciption,
+                Category = category,
                 Frequency = frequency,
                 Image = image
             };
@@ -48,6 +52,8 @@ namespace Domain.DTO
                 createdOn = occurrence.CreatedOn,
                 expectedDate = occurrence.ExpectedDate,
                 status = occurrence.Status,
+                category = occurrence.Category, 
+                desciption = occurrence.Desciption,
                 frequency = occurrence.Frequency,
                 image = occurrence.Image
             };
