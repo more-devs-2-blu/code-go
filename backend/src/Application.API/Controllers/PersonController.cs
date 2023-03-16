@@ -44,6 +44,7 @@ namespace Application.API.Controllers
         [HttpPost]
         public async Task<ActionResult<PersonDTO>> Post([FromBody] PersonDTO person)
         {
+            person.createdOn = DateTime.Now;
             if (person == null) return BadRequest();
             return new ObjectResult(await _personService.Save(person));
         }

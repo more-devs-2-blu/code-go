@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth.guard';
 import { RegisterComponent } from './components/register/register.component';
 import { OccurrenceComponent } from './components/occurrence/occurrence.component';
 import { LoginComponent } from './components/login/login.component';
