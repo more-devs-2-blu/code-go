@@ -10,6 +10,7 @@ D:\Projetos\code-go\backend\src\Domain\obj\Debug\net6.0\Domain.dll
 D:\Projetos\code-go\backend\src\Domain\obj\Debug\net6.0\refint\Domain.dll
 D:\Projetos\code-go\backend\src\Domain\obj\Debug\net6.0\Domain.pdb
 D:\Projetos\code-go\backend\src\Domain\obj\Debug\net6.0\ref\Domain.dll
+<<<<<<< HEAD
 C:\ZeloBR\code-go\backend\src\Domain\bin\Debug\net6.0\Domain.deps.json
 C:\ZeloBR\code-go\backend\src\Domain\bin\Debug\net6.0\Domain.dll
 C:\ZeloBR\code-go\backend\src\Domain\bin\Debug\net6.0\Domain.pdb
@@ -22,3 +23,17 @@ C:\ZeloBR\code-go\backend\src\Domain\obj\Debug\net6.0\Domain.dll
 C:\ZeloBR\code-go\backend\src\Domain\obj\Debug\net6.0\refint\Domain.dll
 C:\ZeloBR\code-go\backend\src\Domain\obj\Debug\net6.0\Domain.pdb
 C:\ZeloBR\code-go\backend\src\Domain\obj\Debug\net6.0\ref\Domain.dll
+=======
+D:\code-go\backend\src\Domain\bin\Debug\net6.0\Domain.deps.json
+D:\code-go\backend\src\Domain\bin\Debug\net6.0\Domain.dll
+D:\code-go\backend\src\Domain\bin\Debug\net6.0\Domain.pdb
+D:\code-go\backend\src\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+D:\code-go\backend\src\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\code-go\backend\src\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+D:\code-go\backend\src\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+D:\code-go\backend\src\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+D:\code-go\backend\src\Domain\obj\Debug\net6.0\Domain.dll
+D:\code-go\backend\src\Domain\obj\Debug\net6.0\refint\Domain.dll
+D:\code-go\backend\src\Domain\obj\Debug\net6.0\Domain.pdb
+D:\code-go\backend\src\Domain\obj\Debug\net6.0\ref\Domain.dll
+>>>>>>> b1a3f8348e89d61c37b4108cdb3922361f2954a5

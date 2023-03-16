@@ -28,6 +28,7 @@ export class Occurrence{
   frequency?: number;
   image?: string;
   createdOn?: Date;
+  category?: number;
   expectedDate?: Date;
 }
 

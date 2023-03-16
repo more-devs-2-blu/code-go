@@ -13,6 +13,12 @@ import { Observable } from 'rxjs';
 })
 export class ListOccurrenceComponent implements OnInit{
 
+  public statusSelecionado: number | null = null;
+  public categorySelecionado: number | null = null;
+  public districtSelecionado: number | null = null;
+
+  public login = localStorage.getItem("UserType")
+
   public charactersList = new Observable<Occurrence[]>();
 
   public listOccurrence: Occurrence[] = [];
@@ -22,6 +28,54 @@ export class ListOccurrenceComponent implements OnInit{
   ngOnInit(): void {
 
     this.charactersList = this.service.getAll();
+
+    this.charactersList.subscribe(
+      (resp) =>{
+          this.listOccurrence = resp;
+          console.log(this.listOccurrence);
+      }
+    );
+  }
+
+  GetByStatus(i: any): void {
+    console.log("Get by status", i)
+    this.charactersList = this.service.getByStatus(this.statusSelecionado);
+
+    this.charactersList.subscribe(
+      (resp) =>{
+          this.listOccurrence = resp;
+          console.log(this.listOccurrence);
+      }
+    );
+  }
+
+  GetByIdPerson(i: any): void {
+
+    this.charactersList = this.service.getByIdPerson({ i });
+
+    this.charactersList.subscribe(
+      (resp) =>{
+          this.listOccurrence = resp;
+          console.log(this.listOccurrence);
+      }
+    );
+  }
+
+  GetByDistrict(i: any): void {
+
+    this.charactersList = this.service.getByDistrict(this.districtSelecionado);
+
+    this.charactersList.subscribe(
+      (resp) =>{
+          this.listOccurrence = resp;
+          console.log(this.listOccurrence);
+      }
+    );
+  }
+
+  GetByCategory(i: any): void {
+
+    this.charactersList = this.service.getByCategory(this.categorySelecionado);
 
     this.charactersList.subscribe(
       (resp) =>{
