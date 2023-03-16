@@ -59,6 +59,9 @@ export class LoginComponent implements OnInit {
   enviarCadastro():void{
     console.log(this.formulario);
     const person: Person = this.formulario.value;
+    person.type = 1;
+    console.log(person)
+    localStorage.setItem("UserType", "1");
     this.service.postPerson(person).subscribe((resp)=>{
       this.auth.login().then(()=>{
         this.router.navigate(['/list-occurrence'])
@@ -67,7 +70,16 @@ export class LoginComponent implements OnInit {
   }
 
   enviarLogin():void{
+    const person: Person = this.formularioLogin.value;
 
+    this.service.getLogin(person).subscribe((resp)=>{
+      console.log(resp);
+      if(resp){
+        this.auth.login().then(()=>{
+          this.router.navigate(['/list-occurrence'])
+        })
+      }
+    })
   }
 
   // createPerson(person: Person){

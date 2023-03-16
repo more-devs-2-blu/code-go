@@ -27,4 +27,8 @@ export class PersonService {
   public postPerson(person: Person): Observable<Person>{
     return this.http.post<Person>(`${environment.apiUrl}/${this.url}`, person);
   }
+
+  public getLogin(person: Person): Observable<Person>{
+    return this.http.get<Person>(`${environment.apiUrl}/${this.url}/login/${person.email}&${person.password}`);
+  }
 }

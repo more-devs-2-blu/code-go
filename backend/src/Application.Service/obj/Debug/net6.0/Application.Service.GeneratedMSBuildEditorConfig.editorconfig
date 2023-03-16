@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Application.Service
-build_property.ProjectDir = C:\ZeloBR\code-go\backend\src\Application.Service\
+build_property.ProjectDir = D:\code-go\backend\src\Application.Service\
