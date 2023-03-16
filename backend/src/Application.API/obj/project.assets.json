@@ -7223,19 +7223,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jails\\.nuget\\packages\\": {}
+    "C:\\Users\\Roberto\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\code-go\\backend\\src\\Application.API\\Application.API.csproj",
+      "projectUniqueName": "D:\\code-go\\backend\\src\\Application.API\\Application.API.csproj",
       "projectName": "Application.API",
-      "projectPath": "D:\\Projetos\\code-go\\backend\\src\\Application.API\\Application.API.csproj",
-      "packagesPath": "C:\\Users\\jails\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\code-go\\backend\\src\\Application.API\\obj\\",
+      "projectPath": "D:\\code-go\\backend\\src\\Application.API\\Application.API.csproj",
+      "packagesPath": "C:\\Users\\Roberto\\.nuget\\packages\\",
+      "outputPath": "D:\\code-go\\backend\\src\\Application.API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\jails\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Roberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7249,14 +7254,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Projetos\\code-go\\backend\\src\\Application.Service\\Application.Service.csproj": {
-              "projectPath": "D:\\Projetos\\code-go\\backend\\src\\Application.Service\\Application.Service.csproj"
+            "D:\\code-go\\backend\\src\\Application.Service\\Application.Service.csproj": {
+              "projectPath": "D:\\code-go\\backend\\src\\Application.Service\\Application.Service.csproj"
             },
-            "D:\\Projetos\\code-go\\backend\\src\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Projetos\\code-go\\backend\\src\\Domain\\Domain.csproj"
+            "D:\\code-go\\backend\\src\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\code-go\\backend\\src\\Domain\\Domain.csproj"
             },
-            "D:\\Projetos\\code-go\\backend\\src\\Infra.Data.Repository\\Infra.Data.Repository.csproj": {
-              "projectPath": "D:\\Projetos\\code-go\\backend\\src\\Infra.Data.Repository\\Infra.Data.Repository.csproj"
+            "D:\\code-go\\backend\\src\\Infra.Data.Repository\\Infra.Data.Repository.csproj": {
+              "projectPath": "D:\\code-go\\backend\\src\\Infra.Data.Repository\\Infra.Data.Repository.csproj"
             }
           }
         }

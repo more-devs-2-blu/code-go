@@ -13,6 +13,10 @@ import { Observable } from 'rxjs';
 })
 export class ListOccurrenceComponent implements OnInit{
 
+  public statusSelecionado: number | null = null;
+  public categorySelecionado: number | null = null;
+  public districtSelecionado: number | null = null;
+
   public charactersList = new Observable<Occurrence[]>();
 
   public listOccurrence: Occurrence[] = [];
@@ -33,7 +37,7 @@ export class ListOccurrenceComponent implements OnInit{
 
   GetByStatus(i: any): void {
     console.log("Get by status", i)
-    this.charactersList = this.service.getByStatus(i);
+    this.charactersList = this.service.getByStatus(this.statusSelecionado);
 
     this.charactersList.subscribe(
       (resp) =>{
@@ -57,7 +61,7 @@ export class ListOccurrenceComponent implements OnInit{
 
   GetByDistrict(i: any): void {
 
-    this.charactersList = this.service.getByDistrict(i);
+    this.charactersList = this.service.getByDistrict(this.districtSelecionado);
 
     this.charactersList.subscribe(
       (resp) =>{
@@ -69,7 +73,7 @@ export class ListOccurrenceComponent implements OnInit{
 
   GetByCategory(i: any): void {
 
-    this.charactersList = this.service.getByCategory(i);
+    this.charactersList = this.service.getByCategory(this.categorySelecionado);
 
     this.charactersList.subscribe(
       (resp) =>{

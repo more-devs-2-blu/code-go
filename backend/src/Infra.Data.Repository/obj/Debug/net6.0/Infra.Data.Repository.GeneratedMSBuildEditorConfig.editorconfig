@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Infra.Data.Repository
-build_property.ProjectDir = D:\Projetos\code-go\backend\src\Infra.Data.Repository\
+build_property.ProjectDir = D:\code-go\backend\src\Infra.Data.Repository\

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\code-go\\backend\\src\\Domain\\Domain.csproj": {}
+    "D:\\code-go\\backend\\src\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\code-go\\backend\\src\\Domain\\Domain.csproj": {
+    "D:\\code-go\\backend\\src\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\code-go\\backend\\src\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\code-go\\backend\\src\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Projetos\\code-go\\backend\\src\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\jails\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\code-go\\backend\\src\\Domain\\obj\\",
+        "projectPath": "D:\\code-go\\backend\\src\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Roberto\\.nuget\\packages\\",
+        "outputPath": "D:\\code-go\\backend\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jails\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Roberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
