@@ -17,6 +17,8 @@ export class ListOccurrenceComponent implements OnInit{
   public categorySelecionado: number | null = null;
   public districtSelecionado: number | null = null;
 
+  public login = localStorage.getItem("UserType")
+
   public charactersList = new Observable<Occurrence[]>();
 
   public listOccurrence: Occurrence[] = [];
