@@ -15,7 +15,6 @@ D:\Projetos\code-go\backend\src\Application.Service\bin\Debug\net6.0\Infra.Data.
 D:\Projetos\code-go\backend\src\Application.Service\bin\Debug\net6.0\Domain.pdb
 D:\Projetos\code-go\backend\src\Application.Service\bin\Debug\net6.0\Infra.Data.Repository.pdb
 D:\Projetos\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.csproj.CopyComplete
-<<<<<<< HEAD
 C:\ZeloBR\code-go\backend\src\Application.Service\bin\Debug\net6.0\Application.Service.deps.json
 C:\ZeloBR\code-go\backend\src\Application.Service\bin\Debug\net6.0\Application.Service.dll
 C:\ZeloBR\code-go\backend\src\Application.Service\bin\Debug\net6.0\Application.Service.pdb
@@ -33,22 +32,3 @@ C:\ZeloBR\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.S
 C:\ZeloBR\code-go\backend\src\Application.Service\obj\Debug\net6.0\refint\Application.Service.dll
 C:\ZeloBR\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.pdb
 C:\ZeloBR\code-go\backend\src\Application.Service\obj\Debug\net6.0\ref\Application.Service.dll
-=======
-D:\code-go\backend\src\Application.Service\bin\Debug\net6.0\Application.Service.deps.json
-D:\code-go\backend\src\Application.Service\bin\Debug\net6.0\Application.Service.dll
-D:\code-go\backend\src\Application.Service\bin\Debug\net6.0\Application.Service.pdb
-D:\code-go\backend\src\Application.Service\bin\Debug\net6.0\Domain.dll
-D:\code-go\backend\src\Application.Service\bin\Debug\net6.0\Infra.Data.Repository.dll
-D:\code-go\backend\src\Application.Service\bin\Debug\net6.0\Domain.pdb
-D:\code-go\backend\src\Application.Service\bin\Debug\net6.0\Infra.Data.Repository.pdb
-D:\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.csproj.AssemblyReference.cache
-D:\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.GeneratedMSBuildEditorConfig.editorconfig
-D:\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.AssemblyInfoInputs.cache
-D:\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.AssemblyInfo.cs
-D:\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.csproj.CoreCompileInputs.cache
-D:\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.csproj.CopyComplete
-D:\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.dll
-D:\code-go\backend\src\Application.Service\obj\Debug\net6.0\refint\Application.Service.dll
-D:\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.pdb
-D:\code-go\backend\src\Application.Service\obj\Debug\net6.0\ref\Application.Service.dll
->>>>>>> b1a3f8348e89d61c37b4108cdb3922361f2954a5
