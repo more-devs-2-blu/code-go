@@ -15,9 +15,9 @@
       </select>
       <select class="form-select w-25" aria-label="Default select example">
         <option selected>Status</option>
-        <option value="1">One</option>
+        <option value="1">Em Andamento</option>
         <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option value="3">Resolvido</option>
       </select>
       <button type="button" class="btn btn-dark">Adicionar</button>
     </div>
@@ -27,7 +27,7 @@
           <h5 class="card-title my-auto">{{occurrence.id}}</h5>
           <p class="card-text my-auto">{{occurrence.address.street}}, {{occurrence.address.number}} - Bairro {{occurrence.address.district}}</p>
           <p class="card-text my-auto">{{occurrence.createdOn | date:'MM/dd/yyyy'}}</p>
-          <p *ngIf="occurrence.status==0" style="background-color: #428BFF; border-color: transparent;" href="#" class="btn btn-primary my-auto">Ciente</p>
+          <p *ngIf="occurrence.status==0"  style="background-color: #428BFF; border-color: transparent;" href="#" class="btn btn-primary my-auto">Ciente</p>
           <p *ngIf="occurrence.status==1" style="background-color: #FFBF1B; border-color: transparent;" href="#" class="btn btn-primary my-auto">Em Andamento</p>
           <p *ngIf="occurrence.status==2" style="background-color: #6FC63A; border-color: transparent;" href="#" class="btn btn-primary my-auto">Resolvido</p>
         </div>

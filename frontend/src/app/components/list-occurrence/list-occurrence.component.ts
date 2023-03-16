@@ -31,6 +31,54 @@ export class ListOccurrenceComponent implements OnInit{
     );
   }
 
+  GetByStatus(i: any): void {
+    console.log("Get by status", i)
+    this.charactersList = this.service.getByStatus(i);
+
+    this.charactersList.subscribe(
+      (resp) =>{
+          this.listOccurrence = resp;
+          console.log(this.listOccurrence);
+      }
+    );
+  }
+
+  GetByIdPerson(i: any): void {
+
+    this.charactersList = this.service.getByIdPerson({ i });
+
+    this.charactersList.subscribe(
+      (resp) =>{
+          this.listOccurrence = resp;
+          console.log(this.listOccurrence);
+      }
+    );
+  }
+
+  GetByDistrict(i: any): void {
+
+    this.charactersList = this.service.getByDistrict(i);
+
+    this.charactersList.subscribe(
+      (resp) =>{
+          this.listOccurrence = resp;
+          console.log(this.listOccurrence);
+      }
+    );
+  }
+
+  GetByCategory(i: any): void {
+
+    this.charactersList = this.service.getByCategory(i);
+
+    this.charactersList.subscribe(
+      (resp) =>{
+          this.listOccurrence = resp;
+          console.log(this.listOccurrence);
+      }
+    );
+  }
+
 }
 
 

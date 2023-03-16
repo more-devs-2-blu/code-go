@@ -14,4 +14,20 @@ export class OccurrenceService {
   public getAll(): Observable<Occurrence[]>{
     return this.http.get<Occurrence[]>(`${environment.apiUrl}/${this.url}`);
   }
+
+  public getByStatus(i: any): Observable<Occurrence[]>{
+    return this.http.get<Occurrence[]>(`${environment.apiUrl}/${this.url}/Status/${i}`);
+  }
+
+  public getByIdPerson(i: any): Observable<Occurrence[]>{
+    return this.http.get<Occurrence[]>(`${environment.apiUrl}/${this.url}/idPerson/${i}`);
+  }
+
+  public getByDistrict(i: any): Observable<Occurrence[]>{
+    return this.http.get<Occurrence[]>(`${environment.apiUrl}/${this.url}/District/${i}`);
+  }
+
+  public getByCategory(i: any): Observable<Occurrence[]>{
+    return this.http.get<Occurrence[]>(`${environment.apiUrl}/${this.url}/Category/${i}`);
+  }
 }
