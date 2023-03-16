@@ -43,10 +43,11 @@
             d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10">
           </path>
         </svg>
+        <!-- Show Modal Button -->
         <button *ngIf="login != '0'" type="button" class="btn btn-dark" data-bs-toggle="modal"
           data-bs-target="#exampleModal" (click)="selectOccurrence(occurrence)">Detalhes</button>
-
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- Modal Details -->
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -94,8 +95,59 @@
               </div>
             </div>
           </div>
+        </div> -->
+        <!-- Modal Add New Occurrance -->
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="textCategory">Adicionar nova ocorrência
+                </h5>
+                <div class="closebtn">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+              </div>
+              <div class="modal-body" id="modal-add">
+                <form action="#">
+                <div class="input-box">
+                  <input type="text" placeholder="Rua" required>
+                </div>
+                <div class="input-box">
+                  <input type="text" placeholder="Bairro" required>
+                </div>
+                <div class="input-box">
+                  <input type="text" placeholder="CEP" required>
+                </div>
+                <div class="input-box">
+                  <input type="text" placeholder="Cidade" required>
+                </div>
+                <select class="form-select" id="form-dropdown">
+                  <option selected id="dropdown-option">Categoria</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <div class="input-box">
+                  <input type="text" placeholder="Categoria" required>
+                </div>
+                <div class="input-box">
+                  <input type="text" placeholder="Descrição" required>
+                </div>      
+                <div class="input-box button">
+                  <input type="close" value="Cancel">
+                </div>
+                <div class="input-box button">
+                  <input type="Submit" value="Save">
+                </div>      
+              </form>
+              </div>
+            </div>
+          </div>
         </div>
 
+
+        <!-- Modal Edit Occurrance (Contributor) -->
       </div>
     </div>
   </div>

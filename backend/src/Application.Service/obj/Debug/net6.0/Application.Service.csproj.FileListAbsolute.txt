@@ -32,3 +32,20 @@ C:\ZeloBR\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.S
 C:\ZeloBR\code-go\backend\src\Application.Service\obj\Debug\net6.0\refint\Application.Service.dll
 C:\ZeloBR\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.pdb
 C:\ZeloBR\code-go\backend\src\Application.Service\obj\Debug\net6.0\ref\Application.Service.dll
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\bin\Debug\net6.0\Application.Service.deps.json
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\bin\Debug\net6.0\Application.Service.dll
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\bin\Debug\net6.0\Application.Service.pdb
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\bin\Debug\net6.0\Domain.dll
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\bin\Debug\net6.0\Infra.Data.Repository.dll
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\bin\Debug\net6.0\Domain.pdb
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\bin\Debug\net6.0\Infra.Data.Repository.pdb
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.csproj.AssemblyReference.cache
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.GeneratedMSBuildEditorConfig.editorconfig
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.AssemblyInfoInputs.cache
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.AssemblyInfo.cs
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.csproj.CoreCompileInputs.cache
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.csproj.CopyComplete
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.dll
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\obj\Debug\net6.0\refint\Application.Service.dll
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\obj\Debug\net6.0\Application.Service.pdb
+E:\TrabalhosDevs\Code-Go Cora\code-go\backend\src\Application.Service\obj\Debug\net6.0\ref\Application.Service.dll
