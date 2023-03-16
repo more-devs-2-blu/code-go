@@ -1,8 +1,10 @@
+import { AuthService } from './../../services/auth.service';
 import { PersonService } from './../../services/person.service';
 import { Login } from './../../models/login';
 import { Person } from './../../models/person';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, Type } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   // @Output() personsUpdated = new EventEmitter<Person[]>();
 
-  constructor(public service: PersonService) { }
+  constructor(public service: PersonService, public auth: AuthService, public router: Router) { }
 
   ngOnInit(): void {
 
@@ -26,10 +28,9 @@ export class LoginComponent implements OnInit {
       birth: new FormControl(null),
       email: new FormControl(null),
       password: new FormControl(null),
-      phone: new FormControl(null),
       cpf: new FormControl(null),
-      type: new FormControl(null),
-      createdOn: new FormControl(null),
+      // type: new FormControl(null),
+      // createdOn: new FormControl(null),
     })
 
     this.formularioLogin = new FormGroup({
@@ -56,10 +57,17 @@ export class LoginComponent implements OnInit {
   }
 
   enviarCadastro():void{
+    console.log(this.formulario);
     const person: Person = this.formulario.value;
-    this.service.postPerson(person).subscribe(resp=>{
-      alert('Pessoa inserida com sucesso');
+    this.service.postPerson(person).subscribe((resp)=>{
+      this.auth.login().then(()=>{
+        this.router.navigate(['/list-occurrence'])
+      })
     })
+  }
+
+  enviarLogin():void{
+
   }
 
   // createPerson(person: Person){

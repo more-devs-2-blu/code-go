@@ -21,11 +21,10 @@
     <div class="card-list container align-center mx-auto p-5 mt-3">
       <div *ngFor="let occurrence of listOccurrence" class="card mx-auto mb-3 cards">
         <div class="card-body d-flex justify-content-between my-auto">
-          <h5 class="card-title my-auto">{{occurrence.id}}</h5>
+          <p *ngIf="occurrence.category==0"  class="my-auto fw-bolder">Alagamento regional</p>
+          <p *ngIf="occurrence.category==1" class="my-auto fw-bolder">Terreno irregular</p>
+          <p *ngIf="occurrence.category==2" class="my-auto fw-bolder">Irregularidade na estrada</p>
           <p class="card-text my-auto">{{occurrence.address.street}}, {{occurrence.address.number}} - Bairro {{occurrence.address.district}}</p>
-          <p *ngIf="occurrence.category==0"  class="my-auto">Alagamento regional</p>
-          <p *ngIf="occurrence.category==1" class="my-auto">Terreno irregular</p>
-          <p *ngIf="occurrence.category==2" class="my-auto">Irregularidade na estrada</p>
           <p class="card-text my-auto">{{occurrence.createdOn | date:'MM/dd/yyyy'}}</p>
           <p *ngIf="occurrence.status==0"  style="background-color: #428BFF; border-color: transparent;" href="#" class="btn btn-primary my-auto">Ciente</p>
           <p *ngIf="occurrence.status==1" style="background-color: #FFBF1B; border-color: transparent;" href="#" class="btn btn-primary my-auto">Em Andamento</p>

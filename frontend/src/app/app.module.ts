@@ -1,3 +1,4 @@
+import { PersonService } from './services/person.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -33,7 +34,7 @@ import { DynamicModalComponent } from './components/dynamic-modal/dynamic-modal.
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [HttpClientModule, PersonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth.guard';
 import { RegisterComponent } from './components/register/register.component';
 import { OccurrenceComponent } from './components/occurrence/occurrence.component';
 import { LoginComponent } from './components/login/login.component';
@@ -11,8 +12,8 @@ const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'list-occurrence', component: ListOccurrenceComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'occurrence', component: OccurrenceComponent},
-  {path: 'register', component: RegisterComponent}
+  {path: 'occurrence', component: OccurrenceComponent, canActivate: [AuthGuard]},
+  {path: 'register', component: RegisterComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

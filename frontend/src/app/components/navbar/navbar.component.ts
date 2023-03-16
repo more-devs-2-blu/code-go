@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { AuthService } from './../../services/auth.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  constructor(public auth: AuthService, public router: Router){}
+
+  logout():void{
+    localStorage.removeItem('loggedIn');
+    this.router.navigate(['/'])
+  }
 }

@@ -14,7 +14,6 @@ namespace Domain.Entities
         public DateTime? Birth { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public string? Phone { get; set; }
         public DateTime CreatedOn { get; set; }
         public string CPF { get; set; }
         public PersonTypeEnum Type { get; set; } 

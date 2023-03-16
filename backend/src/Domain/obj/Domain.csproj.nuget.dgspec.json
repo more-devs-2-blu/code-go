@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code-go\\backend\\src\\Domain\\Domain.csproj": {}
+    "C:\\ZeloBR\\code-go\\backend\\src\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\code-go\\backend\\src\\Domain\\Domain.csproj": {
+    "C:\\ZeloBR\\code-go\\backend\\src\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code-go\\backend\\src\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\ZeloBR\\code-go\\backend\\src\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\code-go\\backend\\src\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Roberto\\.nuget\\packages\\",
-        "outputPath": "D:\\code-go\\backend\\src\\Domain\\obj\\",
+        "projectPath": "C:\\ZeloBR\\code-go\\backend\\src\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\yasmi\\.nuget\\packages\\",
+        "outputPath": "C:\\ZeloBR\\code-go\\backend\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Roberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yasmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

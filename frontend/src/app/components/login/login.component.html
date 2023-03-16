@@ -4,12 +4,19 @@
         <div *ngIf="formulario" class="form-container sign-up-container">
             <form [formGroup]="formulario" action="#" (ngSubmit)="enviarCadastro()">
                 <h2>Cadastre-se</h2>
+                <!-- <input formControlName="id" type="number"  value="3" placeholder="Id" /> -->
                 <input formControlName= "name" type="text" placeholder="Nome" />
+                <input formControlName= "birth" type="date" placeholder="Data de Nascimento" />
                 <input formControlName= "cpf" type="cpf" placeholder="CPF" />
                 <input formControlName= "email" type="email" placeholder="Email" />
                 <input formControlName= "password" type="password" placeholder="Senha" />
-                <input formControlName= "type" type="password" class="d-none" value="1" placeholder="Type" />
-                <input formControlName="createdOn" type="date" class="d-none" value="1" placeholder="Type" />
+                <div class="d-none">
+                  <input formControlName="type" type="number" value="1" class="" placeholder="Type" />
+                  <input formControlName="createdOn" class="" type="date" placeholder="CreatedOn" />
+
+                </div>
+
+
                 <button class="form-btn">Cadastrar</button>
             </form>
         </div>
