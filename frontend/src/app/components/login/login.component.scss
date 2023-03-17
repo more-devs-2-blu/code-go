@@ -166,6 +166,10 @@ main {
 	transition: transform 0.6s ease-in-out;
 	z-index: 100;
 }
+.lista{
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .container.right-panel-active .overlay-container{
 	transform: translateX(-100%);
